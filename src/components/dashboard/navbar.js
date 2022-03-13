@@ -78,7 +78,6 @@ export const Dashnav = () => {
                   id="user-menu-button"
                   aria-expanded="false"
                   data-dropdown-toggle="dropdown"
-                  onClick={navhandler}
                 >
                   <span className="font-regular">Adeyemi Oluwasegun</span>
                   <img src={avatar} alt="avatar" className="w-8 rounded-full" />
