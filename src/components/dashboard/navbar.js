@@ -139,7 +139,7 @@ export const Dashnav = () => {
 
         <div className="flex flex-wrap">
           <div
-            className={`w-96 md:h-full bg-white mt-8 md:fixed py-5 min-h-screen md:translate-x-0 inset-y-0 left-0 top-12 transform absolute -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={`w-96 md:h-full bg-white mt-6 md:fixed py-5 min-h-screen md:translate-x-0 inset-y-0 left-0 top-12 transform absolute -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >

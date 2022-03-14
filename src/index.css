@@ -34,3 +34,12 @@ body .font-sans{
 .overflow-y-scroll::-webkit-scrollbar-thumb {
   background-color: #E9EDF1;
 }
+
+.active, .active:hover{
+  color: #5145cd!important;
+  border-left-color: #5145cd!important;
+  border-left-width: 4px;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
