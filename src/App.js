@@ -88,7 +88,7 @@ const App = () => {
 
               {/* Dashboard Layout route */}
               <Route path="/dashboard" element={<DashboardGuard> <DashboardLayout /> </DashboardGuard>} >
-                  <Route path="home" element={<Home/>}></Route>    
+                  <Route index element={<Home/>}></Route>    
               </Route>
 
 

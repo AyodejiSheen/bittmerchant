@@ -6,10 +6,13 @@ import 'flowbite';
 // import 'bootstrap/dist/css/bootstrap.css'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
+import {StyledEngineProvider} from '@mui/material';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <StyledEngineProvider injectfirst>
+        <App />
+    </StyledEngineProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

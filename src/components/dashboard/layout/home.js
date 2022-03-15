@@ -2,6 +2,18 @@ import React from 'react';
 import {Link } from 'react-router-dom';
 import tut from '../../../media/videos/tut.mp4'
 
+
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
+import PrintIcon from '@mui/icons-material/Print';
+import BrushIcon from '@mui/icons-material/Brush';
+import WebIcon from '@mui/icons-material/Web';
+import LayersIcon from '@mui/icons-material/Layers';
+import LanguageIcon from '@mui/icons-material/Language';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
+
 import install from '../../../media/home/install.svg'
 import customize from '../../../media/home/customize.svg'
 import add from '../../../media/home/add.svg'
@@ -9,7 +21,19 @@ import organize from '../../../media/home/organize.svg'
 import domain from '../../../media/home/domain.svg'
 import payment from '../../../media/home/payment.svg'
 
+
+
 const Home = () => {
+
+
+    const [value, setValue] = React.useState('1');
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
+
+
+
     return (
         <main className='my-24  px-5 space-y-12'>
 
@@ -119,47 +143,31 @@ const Home = () => {
                             </div>
 
 
-                            <div className='block md:flex flex-wrap'>
+            <div className='block md:flex flex-wrap'>
+            <TabContext value={value} >
+                <div className='w-full md:w-1/3 bg-gray-100'>
+                <TabList onChange={handleChange} aria-label="lab API tabs example" orientation="vertical"   className='hidden md:block pl-6 focus:bg-indigo-700 focus:text-white'>
+                    <Tab icon={<PrintIcon />} iconPosition="start" label="Install product apps" value="1"  />
+                    <Tab  icon={<BrushIcon />} iconPosition="start" label="Customize Theme"  value="2"  />
+                    <Tab  icon={<WebIcon />} iconPosition="start" label="App Pages"   value="3" />
+                    <Tab  icon={<LayersIcon />} iconPosition="start" label="Organize Navigation"   value="4" />
+                    <Tab  icon={<LanguageIcon />} iconPosition="start" label="Add domain"   value="5" />
+                    <Tab  icon={<LocalAtmIcon />} iconPosition="start" label="Set up payments"   value="6" />
+                </TabList>
 
-                                    <div className="md:w-1/3 bg-gray-100">
-                                    <ul className="flex flex-wrap md:block -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                                        
+                <TabList onChange={handleChange} aria-label="lab API tabs example" className='md:hidden focus:bg-indigo-700 focus:text-white '>
+                    <Tab icon={<PrintIcon />} iconPosition="start"  value="1"  />
+                    <Tab  icon={<BrushIcon />} iconPosition="start"   value="2"  />
+                    <Tab  icon={<WebIcon />} iconPosition="start"   value="3" />
+                    <Tab  icon={<LayersIcon />} iconPosition="start"   value="4" />
+                    <Tab  icon={<LanguageIcon />} iconPosition="start"   value="5" />
+                    <Tab  icon={<LocalAtmIcon />} iconPosition="start"   value="6" />
+                </TabList>
+                </div>
 
-                                    
-                                    <li role="presentation">
-                                    <button class="inline-block py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full active" id="install-tab" data-tabs-target="#install" type="button" role="tab" aria-controls="install" aria-selected="true">
-                                    <i className="fa-solid fa-print mr-3"></i><span className='hidden lg:inline-flex'> Install product apps</span></button>
-                                    </li>
-
-                                    <li role="presentation">
-                                    <button className="inline-block py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-gray-300 border-transparent hover:text-gray-700  dark:text-gray-400 dark:hover:text-gray-300 w-full " id="customize-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false"> 
-                                    <i className="fa-solid fa-paintbrush mr-3"></i>
-                                        Customize theme
-                                        </button></li>
-
-
-                                    <li  role="presentation">
-                                    <button className="inline-block py-6 px-6 text-sm font-medium text-left text-gray-500 border-y border-r-2 border-transparent border-gray-300 hover:text-gray-700  dark:text-gray-400 dark:hover:text-gray-300 w-full" id="app-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false" > <i className="fa-solid fa-pager mr-3"></i> <span className='hidden lg:inline-flex'>App pages </span></button>
-                                    </li>
-
-                                    <li role="presentation">
-                                    <button className="inline-block py-6 px-6 text-sm font-medium text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full" id="organize-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false"><i className="fa-solid fa-layer-group mr-3"></i><span className='hidden lg:inline-flex'>Organize navigation</span></button>
-                                    </li>
-
-                                    <li role="presentation">
-                                    <button className="inline-block py-6 px-6 text-sm font-medium text-left text-gray-500  border-transparent hover:text-gray-700 border-y border-r-2 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full" id="domain-tab" data-tabs-target="#domain" type="button" role="tab" aria-controls="domain" aria-selected="false"> <i className="fa-solid fa-globe mr-3"></i><span className='hidden lg:inline-flex'>Add domain</span></button>
-                                    </li>
-
-                                    <li role="presentation">
-                                    <button className="inline-block py-6 px-6 text-sm font-medium text-left text-gray-500 border-transparent hover:text-gray-700 border-y border-r-2 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full" id="payment-tab" data-tabs-target="#payment" type="button" role="tab" aria-controls="payment" aria-selected="false"> <i className="fa-solid fa-money-bill-wave mr-3"></i><span className='hidden lg:inline-flex'>Set up payments</span></button>
-                                    </li>
-                                    
-                                    </ul>
-                                    </div>
-
-
-                                    <div id="myTabContent" className='flex-1'>
-                                    <div className=" p-8 space-y-16 rounded-lg " id="install" role="tabpanel" aria-labelledby="install-tab">
+                <div className="flex-1 ">
+                    <TabPanel value="1">
+                    <div className=" p-8 space-y-16 rounded-lg ">
                                         <div className='flex items-center justify-between space-x-28'>
                                             <div className='w-3/4 space-y-3'>
                                                 <p className='font-semibold text-md'>Create your products with a print on demand app</p>
@@ -175,8 +183,10 @@ const Home = () => {
                                             <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Browse print on demand apps</button>
                                         </div>
                                     </div>
+                    </TabPanel>
 
-                                    <div class=" hidden p-8  rounded-lg space-y-16 dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <TabPanel value="2">
+                    <div class="  p-8  rounded-lg space-y-16 dark:bg-gray-800" >
                                     <div className='flex items-center justify-between space-x-28'>
                                             <div className='w-3/4 space-y-3'>
                                             <p className='font-semibold text-md'>Edit the look and feel of your online store</p>
@@ -192,8 +202,10 @@ const Home = () => {
                                             <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Customize Theme</button>
                                         </div>
                                     </div>
+                    </TabPanel>
 
-                                    <div class="hidden p-8 rounded-lg space-y-16 dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <TabPanel value="3">
+                    <div class=" p-8 rounded-lg space-y-16 dark:bg-gray-800" >
                                     <div className='flex items-center justify-between space-x-28'>
                                             <div className='w-3/4 space-y-3'>
                                             <p className='font-semibold text-md'>Add pages to your online store</p>
@@ -209,9 +221,10 @@ const Home = () => {
                                             <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Add Pages</button>
                                         </div>
                                     </div>
+                    </TabPanel>
 
-
-                                    <div class="hidden p-8 space-y-16 rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+                    <TabPanel value="4">
+                    <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800" >
                                     <div className='flex items-center justify-between space-x-28'>
                                             <div className='w-3/4 space-y-3'>
                                             <p className='font-semibold text-md'>Organize your online store navigation</p>
@@ -227,9 +240,10 @@ const Home = () => {
                                             <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Organize navigation</button>
                                         </div>
                                     </div>
+                    </TabPanel>
 
-
-                                    <div class="hidden p-8 space-y-16 rounded-lg dark:bg-gray-800" id="domain" role="tabpanel" aria-labelledby="domain-tab">
+                    <TabPanel value="5">
+                    <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800">
                                     <div className='flex items-center justify-between space-x-28'>
                                             <div className='w-3/4 space-y-3'>
                                             <p className='font-semibold text-md'>Strengthen your brand with a custom domain</p>
@@ -245,9 +259,10 @@ const Home = () => {
                                             <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Add Domain</button>
                                         </div>
                                     </div>
+                    </TabPanel>
 
-
-                                    <div class="hidden p-8 space-y-16 rounded-lg dark:bg-gray-800" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+                    <TabPanel value="6">
+                    <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800" >
                                     <div className='flex items-center justify-between space-x-28'>
                                             <div className='w-3/4 space-y-3'>
                                             <p className='font-semibold text-md'>Start selling with Merchantplace Payments</p>
@@ -263,25 +278,13 @@ const Home = () => {
                                             <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Organize navigation</button>
                                         </div>
                                     </div>
+                    </TabPanel>
+                </div>
+                </TabContext>
+            </div> 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                    </div>
-
-                            </div>
 
         </section>
 

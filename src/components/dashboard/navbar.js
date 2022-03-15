@@ -5,6 +5,11 @@ import "flowbite";
 
 import Logo from "../../media/favicon.ico";
 import avatar from "../../media/avatars/300-1.jpg";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const Dashnav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +18,12 @@ export const Dashnav = () => {
     setIsOpen(!isOpen); //to toggle
   };
 
+  // accordion
+  const [expanded, setExpanded] = React.useState(false);
 
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <>
@@ -135,11 +145,13 @@ export const Dashnav = () => {
           </div>
         </div>
 
+
+
         {/* side menu bar */}
 
         <div className="flex flex-wrap">
           <div
-            className={`w-96 md:h-full bg-white mt-6 md:fixed py-5 min-h-screen md:translate-x-0 inset-y-0 left-0 top-12 transform absolute -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={`w-96 md:h-full bg-white mt-6 md:fixed min-h-screen md:translate-x-0 inset-y-0 left-0 top-12 transform absolute -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -147,8 +159,303 @@ export const Dashnav = () => {
               <img src={Logo} alt="LOGO" className="w-8" />
               <p className="">The Plaza wears</p>
             </div>
-            {/* Accordion start */}
-            <div
+
+            {/* Accordion nav start */}
+
+<div className="py-3">
+<Link to="/dashboard" onClick={navhandler}>
+              <Accordion className="shadow-none">
+                <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10">
+                  <div className="space-x-8">
+                    <i className="fa-solid fa-house"></i>
+                    <span>Home</span>
+                  </div>
+                </AccordionSummary>
+              </Accordion>
+            </Link>
+
+            <Accordion
+              className="shadow-none"
+              expanded={expanded === "panel1"}
+              onChange={handleChange("panel1")}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10"
+              >
+                <div className="space-x-8">
+                  <i className="fa-solid fa-cart-flatbed"></i>
+                  <span>Orders</span>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div class="">
+                  <Link to="#" className="block hover:bg-indigo-200 px-20 py-2">
+                    {" "}
+                    Manual Orders
+                  </Link>
+                  <Link to="#" className="block hover:bg-indigo-200 px-20 py-2">
+                    {" "}
+                    Draft
+                  </Link>
+                  <Link to="#" className="block hover:bg-indigo-200 px-20 py-2">
+                    {" "}
+                    Abandoned Checkouts
+                  </Link>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion
+              expanded={expanded === "panel2"}
+              onChange={handleChange("panel2")}
+              className="shadow-none"
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10"
+              >
+                <div className="space-x-8">
+                  <i className="fa-solid fa-tag"></i>
+                  <span>Products</span>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className="space-y-2">
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Inventory
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Transfers
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Collections
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Gift Cards
+                  </Link>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion className="shadow-none">
+              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10">
+                <div className="space-x-8">
+                  <i className="fa-solid fa-user"></i>
+                  <span>Customers</span>
+                </div>
+              </AccordionSummary>
+            </Accordion>
+
+            <Accordion
+              expanded={expanded === "panel3"}
+              onChange={handleChange("panel3")}
+              className="shadow-none"
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+              >
+                <div className="space-x-8">
+                  <i className="fa-solid fa-tag"></i>
+                  <span>Finances</span>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className="space-y-2">
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Billing
+                  </Link>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion
+              expanded={expanded === "panel4"}
+              onChange={handleChange("panel4")}
+              className="shadow-none"
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+              >
+                <div className="space-x-8">
+                  <i className="fa-solid fa-tag"></i>
+                  <span>Analytics</span>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className="space-y-2">
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Reports
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Live View
+                  </Link>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion
+              expanded={expanded === "panel5"}
+              onChange={handleChange("panel5")}
+              className="shadow-none"
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+              >
+                <div className="space-x-8">
+                  <i className="fa-solid fa-tag"></i>
+                  <span>Marketing</span>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails>
+                <div className="space-y-2">
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Campaigns
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Automations
+                  </Link>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion  className="shadow-none">
+              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                <div className="space-x-8">
+                  <i className="fa-solid fa-percent"></i>
+                  <span>Discounts</span>
+                </div>
+              </AccordionSummary>
+            </Accordion>
+
+            <Accordion className="shadow-none">
+              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                <div className="space-x-8">
+                  <i className="fa-solid fa-boxes-stacked"></i>
+                  <span>Apps</span>
+                </div>
+              </AccordionSummary>
+            </Accordion>
+
+            <Accordion className="mt-16 shadow-none">
+              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                <div className="flex justify-between items-center w-full">
+                  <div className="">Sales Channel</div>
+                  <div>
+                    {" "}
+                    <i className="fa-solid fa-circle-plus "></i>{" "}
+                  </div>
+                </div>
+              </AccordionSummary>
+            </Accordion>
+
+            <Accordion
+              expanded={expanded === "panel6"}
+              onChange={handleChange("panel6")}
+              className="shadow-none"
+            >
+              <AccordionSummary
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+              >
+                <div className="flex justify-between items-center w-full">
+                  <div className="space-x-8">
+                    <i className="fa-solid fa-store"></i>
+                    <span className="">Online Store</span>
+                  </div>
+                  <i className="fa-solid fa-eye"></i>
+                </div>
+              </AccordionSummary>
+              <AccordionDetails className="">
+                <div className="space-y-2">
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Themes
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Blog Posts
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Pages
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Navigation
+                  </Link>
+                  <Link
+                    to="#"
+                    className="block hover:bg-indigo-200 px-20 py-2.5"
+                  >
+                    Prefences
+                  </Link>
+                </div>
+              </AccordionDetails>
+            </Accordion>
+
+
+            <Accordion className="mt-16 shadow-none">
+              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                <div className="space-x-8">
+                  <i className="fa-solid fa-gear"></i>
+                  <span>Settings</span>
+                </div>
+              </AccordionSummary>
+            </Accordion>
+</div>
+            
+
+            {/* <div
               id="accordion-flush"
               data-accordion="collapse"
               data-active-classes="bg-indigo-200 text-white font-semibold text-indigo-700"
@@ -174,7 +481,7 @@ export const Dashnav = () => {
                 className="invisible"
                 aria-labelledby="accordion-flush-heading-1"
               >
-                <div class="invisible space-y-2">{/* nothing */}</div>
+                <div class="invisible space-y-2">nothing</div>
               </div>
               </Link>
 
@@ -269,32 +576,7 @@ export const Dashnav = () => {
                 className="hidden"
                 aria-labelledby="accordion-flush-heading-3"
               >
-                <div className="space-y-2">
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Inventory
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Transfers
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Collections
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Gift Cards
-                  </Link>
-                </div>
+
               </div>
 
               <h2 id="accordion-flush-heading-4">
@@ -314,7 +596,7 @@ export const Dashnav = () => {
                 className="invisible"
                 aria-labelledby="accordion-flush-heading-4"
               >
-                <div class="invisible space-y-2">{/* nothing */}</div>
+                <div class="invisible space-y-2">nothing</div>
               </div>
 
               <h2 id="accordion-flush-heading-5">
@@ -466,8 +748,7 @@ export const Dashnav = () => {
                   aria-expanded="false"
                   aria-controls="accordion-flush-body-9"
                 >
-                  <i className="fa-solid fa-percent"></i>
-                  <span>Discounts</span>
+
                 </button>
               </h2>
               <div
@@ -475,7 +756,7 @@ export const Dashnav = () => {
                 className="invisible"
                 aria-labelledby="accordion-flush-heading-9"
               >
-                <div class="invisible space-y-2">{/* nothing */}</div>
+                <div class="invisible space-y-2">nothing</div>
               </div>
 
               <h2 id="accordion-flush-heading-10">
@@ -495,7 +776,7 @@ export const Dashnav = () => {
                 className="invisible"
                 aria-labelledby="accordion-flush-heading-10"
               >
-                <div class="invisible space-y-2">{/* nothing */}</div>
+                <div class="invisible space-y-2">nothing</div>
               </div>
 
               <h2 id="accordion-flush-heading-11">
@@ -515,8 +796,9 @@ export const Dashnav = () => {
                 className="invisible"
                 aria-labelledby="accordion-flush-heading-11"
               >
-                <div class="invisible space-y-2">{/* nothing */}</div>
+                <div class="invisible space-y-2">nothing</div>
               </div>
+
 
               <h2 id="accordion-flush-heading-8">
                 <button
@@ -589,24 +871,20 @@ export const Dashnav = () => {
                 className="invisible"
                 aria-labelledby="accordion-flush-heading-12"
               >
-                <div class="invisible space-y-2">{/* nothing */}</div>
+                <div class="invisible space-y-2">nothing</div>
               </div>
-            </div>
+            </div> */}
 
             {/* Accordion end */}
           </div>
 
           {/* End of side bar */}
 
-
           {/* main Contents */}
 
           <div className="flex-1 bg-slate-100 h-full md:ml-96 z-30">
-
-          <Outlet />
-          
+            <Outlet />
           </div>
-
         </div>
       </div>
     </>
