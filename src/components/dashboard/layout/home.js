@@ -49,7 +49,7 @@ const Home = () => {
                     <div className='w-2/3'>
                         <div className='space-y-3'>
                             <div className='px-12  flex items-center justify-between'>
-                                <h4 className='font-semibold text-md'>How to set up shipping? new</h4>
+                                <h4 className='font-semibold text-md'>How to set up shipping? </h4>
                                 <button
                                 type="button"
                                 className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
