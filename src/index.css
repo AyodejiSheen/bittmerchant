@@ -44,31 +44,4 @@ body .font-sans{
   border-bottom: none;
 }
 
-.css-h0q0iv-MuiButtonBase-root-MuiTab-root{
-  justify-content: flex-start!important;
-}
 
-.css-h0q0iv-MuiButtonBase-root-MuiTab-root{
-  text-transform: none!important;
-  font-family: inherit!important;
-
-}
-
-.css-h0q0iv-MuiButtonBase-root-MuiTab-root.Mui-selected{
-  color: #5145cd!important;
-}
-
-@media only screen and  (min-device-width:300px) and (max-device-width:769px) {
-
-  
-  .css-heg063-MuiTabs-flexContainer{
-    flex-wrap: wrap!important;
-    width: 200px!important;
-    background-color: #5145cd!important;
-  }
-
-  /* .css-h0q0iv-MuiButtonBase-root-MuiTab-root{
-    justify-content:center!important;
-  } */
-   
-}

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
 import tut from '../../../media/videos/tut.mp4'
+import '../../../mobile.css';
+
 
 
 import Tab from '@mui/material/Tab';
