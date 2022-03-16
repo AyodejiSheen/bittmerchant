@@ -93,7 +93,7 @@ const Home = () => {
                             </div>
                             </div>
                             <div className='px-12 space-y-4'>
-                                <p className='text-sm font-thin'>Packaging and shipping your product may not sound like the most glamorous part of running your own business, but it’s one of the most essential aspects of your customer’s experience.</p>
+                                <p className='text-sm font-thin sm-text'>Packaging and shipping your product may not sound like the most glamorous part of running your own business, but it’s one of the most essential aspects of your customer’s experience.</p>
 
                                 <button className='border py-2 px-5 text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white'>Start shipping</button>
                             </div>
