@@ -155,7 +155,7 @@ const Home = () => {
                     <Tab  icon={<LocalAtmIcon />} iconPosition="start" label="Set up payments"   value="6" />
                 </TabList>
 
-                <TabList onChange={handleChange} aria-label="lab API tabs example" className='md:hidden focus:bg-indigo-700 focus:text-white '>
+                <TabList onChange={handleChange} aria-label="lab API tabs example" className='hidden focus:bg-indigo-700 focus:text-white '>
                     <Tab icon={<PrintIcon />} iconPosition="start"  value="1"  />
                     <Tab  icon={<BrushIcon />} iconPosition="start"   value="2"  />
                     <Tab  icon={<WebIcon />} iconPosition="start"   value="3" />
