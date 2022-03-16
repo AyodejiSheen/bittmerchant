@@ -60,15 +60,15 @@ body .font-sans{
 
 @media only screen and  (min-device-width:300px) and (max-device-width:769px) {
   .css-lfwcke-MuiTabs-flexContainer {
-    flex-direction: row!important;
+    /* flex-direction: row!important; */
   }
   
   .css-heg063-MuiTabs-flexContainer{
     flex-wrap: wrap!important;
   }
 
-  .css-h0q0iv-MuiButtonBase-root-MuiTab-root{
+  /* .css-h0q0iv-MuiButtonBase-root-MuiTab-root{
     justify-content:center!important;
-  }
-  
+  } */
+   
 }

@@ -38,7 +38,7 @@ const Home = () => {
         <main className='my-24  px-5 space-y-12'>
 
 {/* SECTION 1 */}
-            <section className='mx-auto md:w-2/3 shadow-md rounded-lg bg-white' data-aos="fade-up">
+            <section className='mx-auto md:w-2/3 shadow-md rounded-lg bg-white' data-aos="fade-down">
                 <div className='flex flex-wrap items-center p-3'>
                     <div className='w-1/3'>
                         <video  className="" style={{width:'100%', height:"100%"}}>
@@ -145,7 +145,7 @@ const Home = () => {
 
             <div className='block md:flex flex-wrap'>
             <TabContext value={value} >
-                <div className='w-full md:w-1/3 bg-gray-100'>
+                <div className=' md:w-1/3 bg-gray-100'>
                 <TabList onChange={handleChange} aria-label="lab API tabs example" orientation="vertical"   className='hidden md:block pl-6 focus:bg-indigo-700 focus:text-white'>
                     <Tab icon={<PrintIcon />} iconPosition="start" label="Install product apps" value="1"  />
                     <Tab  icon={<BrushIcon />} iconPosition="start" label="Customize Theme"  value="2"  />
@@ -155,7 +155,7 @@ const Home = () => {
                     <Tab  icon={<LocalAtmIcon />} iconPosition="start" label="Set up payments"   value="6" />
                 </TabList>
 
-                <TabList onChange={handleChange} aria-label="lab API tabs example" className='hidden focus:bg-indigo-700 focus:text-white '>
+                <TabList onChange={handleChange} aria-label="lab API tabs example" className=' md:hidden focus:bg-indigo-700 focus:text-white w:1/3'>
                     <Tab icon={<PrintIcon />} iconPosition="start"  value="1"  />
                     <Tab  icon={<BrushIcon />} iconPosition="start"   value="2"  />
                     <Tab  icon={<WebIcon />} iconPosition="start"   value="3" />
