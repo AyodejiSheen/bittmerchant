@@ -1,5 +1,4 @@
 import React, { useEffect, useContext, Fragment } from 'react'
-import { Outlet } from "react-router-dom";
 
 
 //contexts
