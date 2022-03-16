@@ -12,11 +12,15 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const Dashnav = () => {
+
+  //navbar
   const [isOpen, setIsOpen] = useState(false);
 
   const navhandler = () => {
     setIsOpen(!isOpen); //to toggle
   };
+
+
 
   // accordion
   const [expanded, setExpanded] = React.useState(false);

@@ -1,20 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link } from 'react-router-dom';
 import tut from '../../../media/videos/tut.mp4'
 import '../../../mobile.css';
-
-
-
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import PrintIcon from '@mui/icons-material/Print';
-import BrushIcon from '@mui/icons-material/Brush';
-import WebIcon from '@mui/icons-material/Web';
-import LayersIcon from '@mui/icons-material/Layers';
-import LanguageIcon from '@mui/icons-material/Language';
-import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 import install from '../../../media/home/install.svg'
 import customize from '../../../media/home/customize.svg'
@@ -27,12 +14,19 @@ import payment from '../../../media/home/payment.svg'
 
 const Home = () => {
 
+    const [active, setActive] = useState('tab1');
 
-    const [value, setValue] = React.useState('1');
+    const handleChange = (value) => {
+        if (value === active){
+            return;
+        }
 
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
+        setActive(value);
+    }
+
+
+
+
 
 
 
@@ -51,7 +45,7 @@ const Home = () => {
                     <div className='w-2/3'>
                         <div className='space-y-3'>
                             <div className='px-12  flex items-center justify-between'>
-                                <h4 className='font-semibold text-md'>How to set up ? </h4>
+                                <h4 className='font-semibold text-md'>How to set up Shipping? </h4>
                                 <button
                                 type="button"
                                 className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
@@ -108,194 +102,195 @@ const Home = () => {
 
         <section className='mx-auto md:w-2/3 shadow-md rounded-lg bg-white' data-aos="fade-up ">
 
-                    <div className='px-8 py-5 flex flex-wrap items-center justify-between border-b'>
-                                <h4 className='text-xl '>Get ready to sell online. Try these tips to get started.</h4>
-                                <button
-                                type="button"
-                                className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
-                                id="option-menu-button"
-                                aria-expanded="false"
-                                data-dropdown-toggle="dropdown3"> 
-                                <i className="fa-solid fa-ellipsis"></i></button>
+            
+        <div className='px-8 py-5 flex flex-wrap items-center justify-between border-b'>
+                    <h4 className='text-xl '>Get ready to sell online. Try these tips to get started.</h4>
+                    <button
+                    type="button"
+                    className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
+                    id="option-menu-button"
+                    aria-expanded="false"
+                    data-dropdown-toggle="dropdown3"> 
+                    <i className="fa-solid fa-ellipsis"></i></button>
+        
+                    <div className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                    id="dropdown3"
+                    >
+                    <div className="py-3 px-4">
+                    <ul className="py-1" aria-labelledby="dropdown">
+                    <li>
+                        <div
+                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        >
+                       <i className="fa-solid fa-xmark mr-3 "></i>  Dismiss
+                        </div>
+                    </li>
+        
+                    <li>
+                        <Link
+                        to="#"
+                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        >
+                        <i className="fa-solid fa-comment-dots mr-3"></i>Feedback
+                        </Link>
+                    </li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
 
-                                <div className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-                                id="dropdown3"
-                                >
-                                <div className="py-3 px-4">
-                                <ul className="py-1" aria-labelledby="dropdown">
-                                <li>
-                                    <div
-                                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                   <i className="fa-solid fa-xmark mr-3 "></i>  Dismiss
-                                    </div>
-                                </li>
+                <div className='block md:flex flex-wrap'>
+                    <div className="md:w-1/3 bg-gray-100 flex flex-wrap md:block">
 
-                                <li>
-                                    <Link
-                                    to="#"
-                                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                    >
-                                    <i className="fa-solid fa-comment-dots mr-3"></i>Feedback
-                                    </Link>
-                                </li>
-                                </ul>
+                       <div>
+                        <button onClick={() => handleChange('tab1')} className='py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full'> <i className="fa-solid fa-print mr-3" ></i> <span className=' hidden lg:inline-flex'>Install product apps</span></button>
+                        </div> 
+
+                        <div>
+                        <button onClick={() => handleChange('tab2')} className='py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full'> <i className="fa-solid fa-paintbrush mr-3"></i> <span className=' hidden lg:inline-flex'>Customize theme</span></button>
+                        </div> 
+
+                        <div>
+                        <button onClick={() => handleChange('tab3')} className='py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full'><i className="fa-solid fa-pager mr-3"></i> <span className=' hidden lg:inline-flex'>App pages</span></button>
+                        </div> 
+
+                        <div>
+                        <button onClick={() => handleChange('tab4')} className='py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full'> <i className="fa-solid fa-layer-group mr-3"></i> <span className=' hidden lg:inline-flex'>Organize navigation</span></button>
+                        </div> 
+
+                        <div>
+                        <button onClick={() => handleChange('tab5')} className='py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full'> <i className="fa-solid fa-globe mr-3"></i> <span className=' hidden lg:inline-flex'>Add domain</span></button>
+                        </div> 
+
+                        <div>
+                        <button onClick={() => handleChange('tab6')} className='py-6 px-6 text-sm font-medium  text-left text-gray-500 border-y border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 w-full'><i className="fa-solid fa-money-bill-wave mr-3"></i> <span className=' hidden lg:inline-flex'>Set up payments</span></button>
+                        </div> 
+                    </div>
+
+
+                    <div className='flex-1'>
+                        <div hidden={active !== 'tab1'}>
+                        <div className=" p-8 space-y-16 rounded-lg " >
+                            <div className='flex items-center justify-between space-x-28'>
+                                <div className='w-3/4 space-y-3'>
+                                    <p className='font-semibold text-md'>Create your products with a print on demand app</p>
+                                    <p className='text-sm font-thin'>Use your designs to create custom printed products. Try a few apps to find the products, prices, and shipping options that work for you.</p>
+                                </div>
+        
+                                <div className='w-1/4' >
+                                    <img src={install} alt="install"/>
                                 </div>
                             </div>
-                            </div>
-
-
-            <div className='block md:flex flex-wrap'>
-            <TabContext value={value} >
-                <div className=' md:w-1/3 bg-gray-100'>
-                <TabList onChange={handleChange} aria-label="lab API tabs example" orientation="vertical"   className='hidden md:block pl-6 focus:bg-indigo-700 focus:text-white'>
-                    <Tab icon={<PrintIcon />} iconPosition="start" label="Install product apps" value="1"  />
-                    <Tab  icon={<BrushIcon />} iconPosition="start" label="Customize Theme"  value="2"  />
-                    <Tab  icon={<WebIcon />} iconPosition="start" label="App Pages"   value="3" />
-                    <Tab  icon={<LayersIcon />} iconPosition="start" label="Organize Navigation"   value="4" />
-                    <Tab  icon={<LanguageIcon />} iconPosition="start" label="Add domain"   value="5" />
-                    <Tab  icon={<LocalAtmIcon />} iconPosition="start" label="Set up payments"   value="6" />
-                </TabList>
-
-                <TabList onChange={handleChange} aria-label="lab API tabs example" className=' md:hidden focus:bg-indigo-700 focus:text-white w:1/3'>
-                    <Tab icon={<PrintIcon />} iconPosition="start"  value="1"  />
-                    <Tab  icon={<BrushIcon />} iconPosition="start"   value="2"  />
-                    <Tab  icon={<WebIcon />} iconPosition="start"   value="3" />
-                    <Tab  icon={<LayersIcon />} iconPosition="start"   value="4" />
-                    <Tab  icon={<LanguageIcon />} iconPosition="start"   value="5" />
-                    <Tab  icon={<LocalAtmIcon />} iconPosition="start"   value="6" />
-                </TabList>
-                </div>
-
-                <div className="flex-1 ">
-                    <TabPanel value="1">
-                    <div className=" p-8 space-y-16 rounded-lg ">
-                                        <div className='flex items-center justify-between space-x-28'>
-                                            <div className='w-3/4 space-y-3'>
-                                                <p className='font-semibold text-md'>Create your products with a print on demand app</p>
-                                                <p className='text-sm font-thin'>Use your designs to create custom printed products. Try a few apps to find the products, prices, and shipping options that work for you.</p>
-                                            </div>
-
-                                            <div className='w-1/4' >
-                                                <img src={install} alt="install"/>
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Browse print on demand apps</button>
-                                        </div>
-                                    </div>
-                    </TabPanel>
-
-                    <TabPanel value="2">
-                    <div class="  p-8  rounded-lg space-y-16 dark:bg-gray-800" >
-                                    <div className='flex items-center justify-between space-x-28'>
-                                            <div className='w-3/4 space-y-3'>
-                                            <p className='font-semibold text-md'>Edit the look and feel of your online store</p>
-                                                <p className='text-sm font-thin'>Choose a theme and add your logo, colors, and images to reflect your brand.</p>
-                                            </div>
-
-                                            <div className='w-1/4' >
-                                                <img src={customize} alt="install"/>
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Customize Theme</button>
-                                        </div>
-                                    </div>
-                    </TabPanel>
-
-                    <TabPanel value="3">
-                    <div class=" p-8 rounded-lg space-y-16 dark:bg-gray-800" >
-                                    <div className='flex items-center justify-between space-x-28'>
-                                            <div className='w-3/4 space-y-3'>
-                                            <p className='font-semibold text-md'>Add pages to your online store</p>
-                                                <p className='text-sm font-thin'>Share your brand story and build trust with customers. Create pages that describe who you are and how people can contact you.</p>
-                                            </div>
-
-                                            <div className='w-1/4' >
-                                                <img src={add} alt="install"/>
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Add Pages</button>
-                                        </div>
-                                    </div>
-                    </TabPanel>
-
-                    <TabPanel value="4">
-                    <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800" >
-                                    <div className='flex items-center justify-between space-x-28'>
-                                            <div className='w-3/4 space-y-3'>
-                                            <p className='font-semibold text-md'>Organize your online store navigation</p>
-                                                <p className='text-sm font-thin'>Help customers to find what they're looking for by organizing the pages on your online store.</p>
-                                            </div>
-
-                                            <div className='w-1/4' >
-                                                <img src={organize} alt="install"/>
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Organize navigation</button>
-                                        </div>
-                                    </div>
-                    </TabPanel>
-
-                    <TabPanel value="5">
-                    <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800">
-                                    <div className='flex items-center justify-between space-x-28'>
-                                            <div className='w-3/4 space-y-3'>
-                                            <p className='font-semibold text-md'>Strengthen your brand with a custom domain</p>
-                                                <p className='text-sm font-thin'>Your current domain is the-plaza-wears.myshopify.com but you can add a custom domain to help customers find your online store.</p>
-                                            </div>
-
-                                            <div className='w-1/4' >
-                                                <img src={domain} alt="install"/>
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Add Domain</button>
-                                        </div>
-                                    </div>
-                    </TabPanel>
-
-                    <TabPanel value="6">
-                    <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800" >
-                                    <div className='flex items-center justify-between space-x-28'>
-                                            <div className='w-3/4 space-y-3'>
-                                            <p className='font-semibold text-md'>Start selling with Merchantplace Payments</p>
-                                                <p className='text-sm font-thin'>Set up your Merchantplace Payments account to start accepting payments. You'll need to provide some basic information about your business.</p>
-                                            </div>
-
-                                            <div className='w-1/4' >
-                                                <img src={payment} alt="install"/>
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Organize navigation</button>
-                                        </div>
-                                    </div>
-                    </TabPanel>
-                </div>
-                </TabContext>
-            </div> 
-
-
-
-
-        </section>
-
-
-
-{/* SECTION 3 */}
-
-        <section>
         
+                            <div className=''>
+                                <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Browse print on demand apps</button>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div hidden={active !== 'tab2'}  >
+                        <div class="  p-8  rounded-lg space-y-16 dark:bg-gray-800">
+                        <div className='flex items-center justify-between space-x-28'>
+                                <div className='w-3/4 space-y-3'>
+                                <p className='font-semibold text-md'>Edit the look and feel of your online store</p>
+                                    <p className='text-sm font-thin'>Choose a theme and add your logo, colors, and images to reflect your brand.</p>
+                                </div>
+        
+                                <div className='w-1/4' >
+                                    <img src={customize} alt="install"/>
+                                </div>
+                            </div>
+        
+                            <div className=''>
+                                <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Customize Theme</button>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div hidden={active !== 'tab3'} >
+                        <div class="p-8 rounded-lg space-y-16 dark:bg-gray-800" >
+                        <div className='flex items-center justify-between space-x-28'>
+                                <div className='w-3/4 space-y-3'>
+                                <p className='font-semibold text-md'>Add pages to your online store</p>
+                                    <p className='text-sm font-thin'>Share your brand story and build trust with customers. Create pages that describe who you are and how people can contact you.</p>
+                                </div>
+        
+                                <div className='w-1/4' >
+                                    <img src={add} alt="install"/>
+                                </div>
+                            </div>
+        
+                            <div className=''>
+                                <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Add Pages</button>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div hidden={active !== 'tab4'}>
+                        <div class=" p-8 space-y-16 rounded-lg dark:bg-gray-800">
+                        <div className='flex items-center justify-between space-x-28'>
+                                <div className='w-3/4 space-y-3'>
+                                <p className='font-semibold text-md'>Organize your online store navigation</p>
+                                    <p className='text-sm font-thin'>Help customers to find what they're looking for by organizing the pages on your online store.</p>
+                                </div>
+        
+                                <div className='w-1/4' >
+                                    <img src={organize} alt="install"/>
+                                </div>
+                            </div>
+        
+                            <div className=''>
+                                <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Organize navigation</button>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div hidden={active !== 'tab5'}  >
+                        <div class="p-8 space-y-16 rounded-lg dark:bg-gray-800" >
+                        <div className='flex items-center justify-between space-x-28'>
+                                <div className='w-3/4 space-y-3'>
+                                <p className='font-semibold text-md'>Strengthen your brand with a custom domain</p>
+                                    <p className='text-sm font-thin'>Your current domain is the-plaza-wears.myshopify.com but you can add a custom domain to help customers find your online store.</p>
+                                </div>
+        
+                                <div className='w-1/4' >
+                                    <img src={domain} alt="install"/>
+                                </div>
+                            </div>
+        
+                            <div className=''>
+                                <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Add Domain</button>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <div hidden={active !== 'tab6'}>
+                        <div class="p-8 space-y-16 rounded-lg dark:bg-gray-800" id="payment" role="tabpanel" aria-labelledby="payment-tab">
+                        <div className='flex items-center justify-between space-x-28'>
+                                <div className='w-3/4 space-y-3'>
+                                <p className='font-semibold text-md'>Start selling with Merchantplace Payments</p>
+                                    <p className='text-sm font-thin'>Set up your Merchantplace Payments account to start accepting payments. You'll need to provide some basic information about your business.</p>
+                                </div>
+        
+                                <div className='w-1/4' >
+                                    <img src={payment} alt="install"/>
+                                </div>
+                            </div>
+        
+                            <div className=''>
+                                <button type='button' className='bg-indigo-700 text-white py-3 px-5 rounded-md text-sm'>Organize navigation</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
         </section>
 
 
