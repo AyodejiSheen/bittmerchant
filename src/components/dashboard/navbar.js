@@ -93,7 +93,7 @@ export const Dashnav = () => {
                   aria-expanded="false"
                   data-dropdown-toggle="dropdown"
                 >
-                  <span className="font-regular">Adeyemi Oluwasegun</span>
+                  <span className="font-regular text-xs md:text-sm ">Adeyemi Oluwasegun</span>
                   <img src={avatar} alt="avatar" className="w-8 rounded-full" />
                 </button>
 

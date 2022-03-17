@@ -35,7 +35,7 @@ body .font-sans{
   background-color: #E9EDF1;
 }
 
-.active, .active:hover{
+ .active:focus{
   color: #5145cd!important;
   border-left-color: #5145cd!important;
   border-left-width: 4px;
