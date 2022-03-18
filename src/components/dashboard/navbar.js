@@ -32,11 +32,11 @@ export const Dashnav = () => {
   return (
     <>
       {/* top menu */}
-      <div className="relative">
+      <div className="relative text-sm md:text-base">
         {/* Desktop Menus */}
         <div className="bg-slate-200 fixed w-full z-50">
           <div className="flex flex-wrap items-center py-3 md:py-5">
-            <div className="w-1/2 px-5 flex flex-wrap items-center space-x-4">
+            <div className="w-1/2 md:px-5 flex flex-wrap items-center space-x-4">
               <img src={Logo} alt="LOGO" className="w-8 hidden md:block" />
               <p className="hidden md:block">Merchantplace</p>
 
@@ -44,12 +44,12 @@ export const Dashnav = () => {
               <div className=" md:hidden">
                 <button
                   onClick={navhandler}
-                  className=" focus:p-4 focus:outline-none focus:bg-indigo-700 focus:text-white  menu-button"
+                  className=" p-4 focus:outline-none focus:bg-indigo-700 focus:text-white  menu-button rounded-2xl"
                 >
                   {isOpen ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
+                      class="h-6 w-6 font-semibold text-2xl "
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -155,7 +155,7 @@ export const Dashnav = () => {
 
         <div className="flex flex-wrap">
           <div
-            className={`w-96 md:h-full bg-white mt-6 md:fixed min-h-screen md:translate-x-0 inset-y-0 left-0 top-12 transform absolute -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={` backdrop-blur-lg w-72 md:w-96 md:h-full bg-white/30 mt-6 md:fixed min-h-screen md:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -279,7 +279,7 @@ export const Dashnav = () => {
                 className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
               >
                 <div className="space-x-8">
-                  <i className="fa-solid fa-tag"></i>
+                <i class="fa-solid fa-wallet"></i>
                   <span>Finances</span>
                 </div>
               </AccordionSummary>
@@ -307,8 +307,8 @@ export const Dashnav = () => {
                 className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
               >
                 <div className="space-x-8">
-                  <i className="fa-solid fa-tag"></i>
-                  <span>Analytics</span>
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Analytics</span>
                 </div>
               </AccordionSummary>
               <AccordionDetails>
@@ -341,8 +341,8 @@ export const Dashnav = () => {
                 className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
               >
                 <div className="space-x-8">
-                  <i className="fa-solid fa-tag"></i>
-                  <span>Marketing</span>
+                <i class="fa-solid fa-bullhorn"></i>
+                                  <span>Marketing</span>
                 </div>
               </AccordionSummary>
               <AccordionDetails>
@@ -366,7 +366,7 @@ export const Dashnav = () => {
             <Accordion  className="shadow-none">
               <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
                 <div className="space-x-8">
-                  <i className="fa-solid fa-percent"></i>
+                  <i class="fa-solid fa-percent"></i>
                   <span>Discounts</span>
                 </div>
               </AccordionSummary>

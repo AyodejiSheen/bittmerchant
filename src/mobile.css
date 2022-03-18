@@ -29,4 +29,12 @@
     .sm-text{
         font-size: 10px!important;
     }
+
+    .blur{
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(15px);
+  }
+
+
   }

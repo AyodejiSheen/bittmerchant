@@ -25,20 +25,20 @@ const Home = () => {
   };
 
   return (
-    <main className="my-24  px-5 space-y-12">
+    <main className="my-24  px-5 space-y-6 md:space-y-12">
       {/* SECTION 1 */}
       <section
         className="mx-auto md:w-2/3 shadow-md rounded-lg bg-white"
         data-aos="fade-down"
       >
-        <div className="md:flex block items-center ">
-          <div className="w-1/3">
+        <div className="md:flex flex-wrap md:flex-row flex-col items-center ">
+          <div className=" md:w-1/3">
             <video className="p-3" style={{ width: "100%", height: "100%" }}>
               <source src={tut} type="video/mp4" />
             </video>
           </div>
 
-          <div className="w-2/3 ">
+          <div className="md:w-2/3 py-6 md:py-0">
             <div className="space-y-3">
               <div className="px-5 md:px-12  flex items-center justify-between">
                 <h4 className="font-semibold text-sm md:text-base">
