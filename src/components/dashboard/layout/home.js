@@ -53,14 +53,14 @@ const Home = () => {
 
                 <div
                   hidden={drop !== "drop1"}
-                  className=" absolute right-0 top-2 z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  className=" absolute right-0 md:top-0 z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                 >
-                  <div className="py-3 px-4">
+                  <div className="md:py-3 md:px-4">
                     <ul className="py-1" aria-labelledby="dropdown">
                       <li>
                         <div
                           onClick={handledrop}
-                          className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
                         </div>
@@ -68,7 +68,7 @@ const Home = () => {
                       <li>
                         <Link
                           to="/shop"
-                          className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           <i class="fa-solid fa-eye mr-3"></i> View Transcript
                         </Link>
@@ -76,7 +76,7 @@ const Home = () => {
                       <li>
                         <Link
                           to="sigin"
-                          className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           <i class="fa-solid fa-comment-dots mr-3"></i>Feedback
                         </Link>
@@ -107,44 +107,49 @@ const Home = () => {
         className="mx-auto md:w-2/3 shadow-md rounded-lg bg-white"
         data-aos="fade-up "
       >
-        <div className="px-12 py-5 flex flex-wrap items-center justify-between border-b relative">
-          <h4 className="text-xl ">
-            Get ready to sell online. Try these tips to get started.
-          </h4>
-          <button
-            className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
-            onClick={() => handledrop("drop2")}
-          >
-            <i className="fa-solid fa-ellipsis"></i>
-          </button>
+        <div className="px-5 md:px-12 py-5 space-x-8 flex-wrap items-center justify-between border-b relative">
 
-          <div
-            hidden={drop !== "drop2"}
-            className=" absolute right-0 top-2 z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-          >
-            <div className="py-3 px-4">
-              <ul className="py-1" aria-labelledby="dropdown">
-                <li>
-                  <div
-                    onClick={handledrop}
-                    className="pointer block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
+                        <div className=" flex items-center justify-between space-x-10">
+                <h4 className="md:text-xl">
+                Get ready to sell online. Try these tips to get started.
+                </h4>
+                <button
+                  type="button"
+                  className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
+                  onClick={() => handledrop("drop2")}
+                >
+                  <i className="fa-solid fa-ellipsis"></i>
+                </button>
+
+                <div
+                  hidden={drop !== "drop2"}
+                  className="absolute right-0 top-0  z-50 my-0 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <div className="md:py-3 md:px-4">
+                    <ul className="py-1" aria-labelledby="dropdown">
+                      <li>
+                        <div
+                          onClick={handledrop}
+                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 cursor-pointer dark:hover:text-white"
+                        >
+                          <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
+                        </div>
+                      </li>
+
+                      <li>
+                        <Link
+                          to="#"
+                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        >
+                          <i className="fa-solid fa-comment-dots mr-3"></i>
+                          Feedback
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-
-                <li>
-                  <Link
-                    to="#"
-                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >
-                    <i className="fa-solid fa-comment-dots mr-3"></i>Feedback
-                  </Link>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
         <div className="block md:flex flex-wrap">
           <div className="md:w-1/3 bg-gray-100 flex flex-wrap md:block justify-between">
@@ -409,8 +414,8 @@ const Home = () => {
       <section className="mx-auto md:w-2/3  ">
         <div className="block md:flex flex-wrap items-stretch justify-between space-y-6 md:space-y-0">
           <div className="md:w-1/2 relative">
-            <div className="space-y-3 p-5 md:p-8 h-60 bg-white md:mr-2 shadow-md rounded-lg">
-              <div className=" flex items-center justify-between">
+            <div className="space-y-3 p-5 md:p-8 h:52 md:h-60 bg-white md:mr-2 shadow-md rounded-lg">
+              <div className=" flex items-center justify-between space-x-10">
                 <h4 className="font-semibold text-sm md:text-base">
                 Start using Developer Tools for your next app or theme project
                 </h4>
@@ -424,14 +429,14 @@ const Home = () => {
 
                 <div
                   hidden={drop !== "drop3"}
-                  className="absolute right-2  z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  className="absolute right-0 md:right-2  z-50 my-0 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                 >
-                  <div className="py-3 px-4">
+                  <div className="md:py-3 md:px-4">
                     <ul className="py-1" aria-labelledby="dropdown">
                       <li>
                         <div
                           onClick={handledrop}
-                          className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 cursor-pointer dark:hover:text-white"
+                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 cursor-pointer dark:hover:text-white"
                         >
                           <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
                         </div>
@@ -440,7 +445,7 @@ const Home = () => {
                       <li>
                         <Link
                           to="#"
-                          className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           <i className="fa-solid fa-comment-dots mr-3"></i>
                           Feedback
@@ -464,8 +469,8 @@ const Home = () => {
 
 
           <div className="md:w-1/2">
-            <div className="space-y-3 p-5 md:p-10 h-60 self-stretch bg-white md:ml-2 shadow-md rounded-lg">
-              <div className="  flex items-center justify-between relative">
+            <div className="space-y-3 p-5 md:p-8 h:52  md:h-60 self-stretch bg-white md:ml-2 shadow-md rounded-lg">
+              <div className="  flex items-center justify-between relative space-x-6">
                 <h4 className="font-semibold text-sm md:text-base">
                 Your online store is password protected
                 </h4>
@@ -479,13 +484,13 @@ const Home = () => {
 
                 <div
                   hidden={drop !== "drop4"}
-                  className="absolute right-0 z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  className="absolute z-50 -right-4 -top-8 md:-right-8 mt-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                   onClick={handledrop}
                 >
-                  <div className="py-3 px-4">
+                  <div className="md:py-3 md:px-4">
                     <ul className="py-1" aria-labelledby="dropdown">
                       <li>
-                        <div className="cursor-pointer block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                        <div className="cursor-pointer block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
                           <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
                         </div>
                       </li>
@@ -493,7 +498,7 @@ const Home = () => {
                       <li>
                         <Link
                           to="#"
-                          className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                         >
                           <i className="fa-solid fa-comment-dots mr-3"></i>
                           Feedback
