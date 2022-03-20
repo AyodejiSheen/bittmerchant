@@ -28,7 +28,7 @@ const Home = () => {
     <main className="my-24  px-5 space-y-6 md:space-y-8 lg:space-y-12">
       {/* SECTION 1 */}
       <section
-        className="mx-auto  md:3/4 lg:w-2/3 shadow-md rounded-lg bg-white"
+        className="mx-auto  md:3/4 lg:w-11/12 xl:w-2/3 shadow-md rounded-lg bg-white"
         data-aos="fade-down"
       >
         <div className="md:flex flex-wrap md:flex-row flex-col items-center ">
@@ -38,7 +38,7 @@ const Home = () => {
             </video>
           </div>
 
-          <div className="md:w-2/3 py-6 md:py-6 lg:py-0">
+          <div className="md:w-2/3 py-6 md:py-6 lg:py-5 xl:py-0">
             <div className="space-y-3">
               <div className="px-5 md:px-12  flex items-center justify-between">
                 <h4 className="font-semibold text-sm md:text-base">
@@ -104,10 +104,10 @@ const Home = () => {
       {/* SECTION 2 */}
 
       <section
-        className="mx-auto md:3/4 lg:w-2/3 shadow-md rounded-lg bg-white"
+        className="mx-auto md:3/4 lg:w-11/12 xl:w-2/3 shadow-md rounded-lg bg-white"
         data-aos="fade-up "
       >
-        <div className="px-5 md:px-12 py-5 space-x-8 flex-wrap items-center justify-between border-b relative">
+        <div className="px-5 md:px-12 lg:px-6 py-5 space-x-8 flex-wrap items-center justify-between border-b relative">
 
                         <div className=" flex items-center justify-between space-x-10">
                 <h4 className="md:text-xl">
@@ -152,11 +152,11 @@ const Home = () => {
             </div>
 
         <div className="block lg:flex flex-wrap">
-          <div className="lg:w-1/3 bg-gray-100 flex flex-wrap lg:block justify-between">
+          <div className="lg:w-56 xl:w-1/3 bg-gray-100 flex flex-wrap lg:block justify-between">
             <div className="">
               <button
                 onClick={() => handleChange("tab1")}
-                className="p-4 md:px-5 md:py-4 lg:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
+                className="p-4 md:px-5 md:py-4 lg:px-6 lg:py-5 xl:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
                 active={active === "tab1"}
               >
                 {" "}
@@ -170,7 +170,7 @@ const Home = () => {
             <div>
               <button
                 onClick={() => handleChange("tab2")}
-                className="p-4 md:px-5 md:py-4 lg:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
+                className="p-4 md:px-5 md:py-4 lg:px-6 lg:py-5 xl:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
               >
                 {" "}
                 <i className="fa-solid fa-paintbrush lg:mr-3"></i>{" "}
@@ -181,7 +181,7 @@ const Home = () => {
             <div>
               <button
                 onClick={() => handleChange("tab3")}
-                className="p-4 md:px-5 md:py-4 lg:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
+                className="p-4 md:px-5 md:py-4 lg:px-6 lg:py-5 xl:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
               >
                 <i className="fa-solid fa-pager lg:mr-3"></i>{" "}
                 <span className=" hidden lg:inline-flex">App pages</span>
@@ -191,11 +191,11 @@ const Home = () => {
             <div>
               <button
                 onClick={() => handleChange("tab4")}
-                className="p-4 md:px-5 md:py-4 lg:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
+                className="lg:text-center p-4 md:px-5 md:py-4 lg:px-6 lg:py-5 xl:p-6 text-sm font-medium md:w-28 text-center mx-auto xl:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
               >
                 {" "}
                 <i className="fa-solid fa-layer-group lg:mr-3"></i>{" "}
-                <span className=" hidden lg:inline-flex">
+                <span className=" hidden lg:inline-flex ">
                   Organize navigation
                 </span>
               </button>
@@ -204,7 +204,7 @@ const Home = () => {
             <div>
               <button
                 onClick={() => handleChange("tab5")}
-                className="p-4 md:px-5 md:py-4 lg:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
+                className="p-4 md:px-5 md:py-4 lg:px-6 lg:py-5 xl:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
               >
                 {" "}
                 <i className="fa-solid fa-globe lg:mr-3"></i>{" "}
@@ -215,7 +215,7 @@ const Home = () => {
             <div>
               <button
                 onClick={() => handleChange("tab6")}
-                className="p-4 md:px-5 md:py-4 lg:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
+                className="p-4 md:px-5 md:py-4 lg:px-6 lg:py-5 xl:p-6 text-sm font-medium md:w-28 text-center mx-auto lg:text-left text-gray-500 md:border-x md:border-y lg:border-r-2 border-transparent hover:text-gray-700 border-gray-300 dark:text-gray-400 dark:hover:textlg:-gray-300 lg:w-full active"
               >
                 <i className="fa-solid fa-money-bill-wave lg:mr-3"></i>{" "}
                 <span className=" hidden lg:inline-flex">Set up payments</span>
@@ -227,8 +227,8 @@ const Home = () => {
 
           <div className="flex-1">
             <div hidden={active !== "tab1"}>
-              <div className="px-7 py-8 md:p-8 space-y-8 md:space-y-16 rounded-lg ">
-                <div className="flex items-center justify-between md:space-x-28 space-x-8">
+              <div className="px-7 py-8 md:p-8 lg:py-7 lg:px-5 xl:p-8 space-y-8 md:space-y-16 rounded-lg ">
+                <div className="flex items-center justify-between md:space-x-28  lg:space-x-12 xl:space-x-28 space-x-8">
                   <div className="w-3/4 space-y-3">
                     <p className="font-semibold text-sm md:text-base">
                       Create your products with a print on demand app
@@ -257,10 +257,10 @@ const Home = () => {
             </div>
 
             <div hidden={active !== "tab2"}>
-              <div class="px-7 py-8 md:p-8 space-y-8 md:space-y-16 rounded-lg">
-                <div className="flex items-center justify-between md:space-x-28 space-x-8">
+            <div className="px-7 py-8 md:p-8 lg:py-7 lg:px-5 xl:p-8 space-y-8 md:space-y-16 rounded-lg ">
+                <div className="flex items-center justify-between md:space-x-28  lg:space-x-12 xl:space-x-28 space-x-8">
                   <div className="w-3/4 space-y-3">
-                    <p className="font-semibold text-sm md:text-md">
+                    <p className="font-semibold text-sm md:text-base">
                       Edit the look and feel of your online store
                     </p>
                     <p className="text-xs md:text-sm font-thin">
@@ -286,10 +286,10 @@ const Home = () => {
             </div>
 
             <div hidden={active !== "tab3"}>
-              <div className="px-7 py-8 md:p-8 space-y-8 md:space-y-16 rounded-lg ">
-                <div className="flex items-center justify-between md:space-x-28 space-x-8">
+            <div className="px-7 py-8 md:p-8 lg:py-7 lg:px-5 xl:p-8 space-y-8 md:space-y-16 rounded-lg ">
+                <div className="flex items-center justify-between md:space-x-28  lg:space-x-12 xl:space-x-28 space-x-8">
                   <div className="w-3/4 space-y-3">
-                    <p className="font-semibold text-sm md:text-md">
+                    <p className="font-semibold text-sm md:text-base">
                       Add pages to your online store
                     </p>
                     <p className="text-xs md:text-sm font-thin">
@@ -316,10 +316,10 @@ const Home = () => {
             </div>
 
             <div hidden={active !== "tab4"}>
-              <div className="px-7 py-8 md:p-8 space-y-8 md:space-y-16 rounded-lg ">
-                <div className="flex items-center justify-between md:space-x-28 space-x-8">
+            <div className="px-7 py-8 md:p-8 lg:py-7 lg:px-5 xl:p-8 space-y-8 md:space-y-16 rounded-lg ">
+                <div className="flex items-center justify-between md:space-x-28  lg:space-x-12 xl:space-x-28 space-x-8">
                   <div className="w-3/4 space-y-3">
-                    <p className="font-semibold text-sm md:text-md">
+                    <p className="font-semibold text-sm md:text-base">
                       Organize your online store navigation
                     </p>
                     <p className="text-xs md:text-sm font-thin">
@@ -345,10 +345,10 @@ const Home = () => {
             </div>
 
             <div hidden={active !== "tab5"}>
-              <div className="px-7 py-8 md:p-8 space-y-8 md:space-y-16 rounded-lg ">
-                <div className="flex items-center justify-between md:space-x-28 space-x-8">
+            <div className="px-7 py-8 md:p-8 lg:py-7 lg:px-5 xl:p-8 space-y-8 md:space-y-16 rounded-lg ">
+                <div className="flex items-center justify-between md:space-x-28  lg:space-x-12 xl:space-x-28 space-x-8">
                   <div className="w-3/4 space-y-3">
-                    <p className="font-semibold text-sm md:text-md">
+                    <p className="font-semibold text-sm md:text-base">
                       Strengthen your brand with a custom domain
                     </p>
                     <p className="text-xs md:text-sm font-thin">
@@ -375,10 +375,10 @@ const Home = () => {
             </div>
 
             <div hidden={active !== "tab6"}>
-              <div className="px-7 py-8 md:p-8 space-y-8 md:space-y-16 rounded-lg ">
-                <div className="flex items-center justify-between md:space-x-28 space-x-8">
+            <div className="px-7 py-8 md:p-8 lg:py-7 lg:px-5 xl:p-8 space-y-8 md:space-y-16 rounded-lg ">
+                <div className="flex items-center justify-between md:space-x-28  lg:space-x-12 xl:space-x-28 space-x-8">
                   <div className="w-3/4 space-y-3">
-                    <p className="font-semibold text-sm md:text-md">
+                    <p className="font-semibold text-sm md:text-base">
                       Start selling with Merchantplace Payments
                     </p>
                     <p className="text-xs md:text-sm font-thin">
@@ -413,10 +413,10 @@ const Home = () => {
 
       {/* section 3 */}
 
-      <section className="mx-auto md:3/4 lg:w-2/3  ">
-        <div className="block lg:flex flex-wrap items-stretch justify-between space-y-6 lg:space-y-0">
-          <div className="lg:w-1/2 relative">
-            <div className="space-y-3 p-5 md:p-8 h:52 lg:h-60 bg-white lg:mr-2 shadow-md rounded-lg">
+      <section className="mx-auto md:3/4  lg:w-11/12 xl:w-2/3  ">
+        <div className="block lg:flex flex-wrap items-stretch justify-between space-y-6 lg:space-y-12 xl:space-y-0">
+          <div className="xl:w-1/2 relative">
+            <div className="space-y-3 p-5 md:p-8 h:52 xl:h-60 bg-white xl:mr-2 shadow-md rounded-lg">
               <div className=" flex items-center justify-between space-x-10">
                 <h4 className="font-semibold text-sm md:text-base">
                 Start using Developer Tools for your next app or theme project
@@ -470,8 +470,8 @@ const Home = () => {
           </div>
 
 
-          <div className="lg:w-1/2">
-            <div className="space-y-3 p-5 md:p-8 h:52  lg:h-60 self-stretch bg-white lg:ml-2 shadow-md rounded-lg">
+          <div className="xl:w-1/2">
+            <div className="space-y-3 p-5 md:p-8 h:52  xl:h-60 self-stretch bg-white xl:ml-2 shadow-md rounded-lg">
               <div className="  flex items-center justify-between relative space-x-6">
                 <h4 className="font-semibold text-sm md:text-base">
                 Your online store is password protected

@@ -154,7 +154,7 @@ export const Dashnav = () => {
 
         <div className="flex flex-wrap">
           <div
-            className={` backdrop-blur-lg overflow-scroll md:w-80 lg:w-96 h-screen md:h-full bg-white/30 mt-6 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={` backdrop-blur-lg overflow-scroll md:w-80 xl:w-96 h-screen md:h-full bg-white/30 mt-6 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -463,7 +463,7 @@ export const Dashnav = () => {
 
           {/* main Contents */}
 
-          <div className="flex-1 bg-slate-100 h-full lg:ml-96 z-30">
+          <div className="flex-1 bg-slate-100 h-full lg:ml-80 xl:ml-96 z-30">
             <Outlet />
           </div>
         </div>
