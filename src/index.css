@@ -38,7 +38,7 @@ body .font-sans{
  .active:focus{
   color: #5145cd!important;
   border-left-color: #5145cd!important;
-  border-left-width: 4px;
+  border-left-width: 4px!important;
   border-right: none;
   border-top: none;
   border-bottom: none;
