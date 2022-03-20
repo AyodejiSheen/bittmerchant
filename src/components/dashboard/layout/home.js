@@ -28,7 +28,7 @@ const Home = () => {
     <main className="my-24  px-5 space-y-6 md:space-y-8 lg:space-y-12">
       {/* SECTION 1 */}
       <section
-        className="mx-auto  md:3/4 lg:w-11/12 xl:w-2/3 shadow-md rounded-lg bg-white"
+        className="mx-auto  md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3 shadow-md rounded-lg bg-white"
         data-aos="fade-down"
       >
         <div className="md:flex flex-wrap md:flex-row flex-col items-center ">
@@ -38,7 +38,7 @@ const Home = () => {
             </video>
           </div>
 
-          <div className="md:w-2/3 py-6 md:py-6 lg:py-5 xl:py-0">
+          <div className="md:w-2/3 py-6 md:py-6 lg:py-5 xl:py-4">
             <div className="space-y-3">
               <div className="px-5 md:px-12  flex items-center justify-between">
                 <h4 className="font-semibold text-sm md:text-base">
@@ -104,7 +104,7 @@ const Home = () => {
       {/* SECTION 2 */}
 
       <section
-        className="mx-auto md:3/4 lg:w-11/12 xl:w-2/3 shadow-md rounded-lg bg-white"
+        className="mx-auto md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3 shadow-md rounded-lg bg-white"
         data-aos="fade-up "
       >
         <div className="px-5 md:px-12 lg:px-6 py-5 space-x-8 flex-wrap items-center justify-between border-b relative">
@@ -413,7 +413,7 @@ const Home = () => {
 
       {/* section 3 */}
 
-      <section className="mx-auto md:3/4  lg:w-11/12 xl:w-2/3  ">
+      <section className="mx-auto md:3/4  lg:w-11/12 xl:w-10/12  2xl:w-2/3  ">
         <div className="block lg:flex flex-wrap items-stretch justify-between space-y-6 lg:space-y-12 xl:space-y-0">
           <div className="xl:w-1/2 relative">
             <div className="space-y-3 p-5 md:p-8 h:52 xl:h-60 bg-white xl:mr-2 shadow-md rounded-lg">
