@@ -46,6 +46,9 @@ import DashboardLayout from './components/dashboard/layout/dashboardLayout';
 //Error page
 import Errorpage from './404.js';
 import Home from './components/dashboard/layout/home';
+import Orders from './components/dashboard/orders/orders';
+import { Drafts } from '@mui/icons-material';
+import AbandonedCheckout from './components/dashboard/orders/abandonedCheckout';
 
 
 Aos.init({ duration: 1000 });
@@ -88,7 +91,10 @@ const App = () => {
 
               {/* Dashboard Layout route */}
               <Route path="/dashboard" element={<DashboardGuard> <DashboardLayout /> </DashboardGuard>} >
-                  <Route index element={<Home/>}></Route>    
+                  <Route index element={<Home/>}></Route> 
+                  <Route path="orders" element={<Orders/>}></Route>
+                  <Route path="draft" element={<Drafts/>}></Route>
+                  <Route path="AbandonedCheckout" element={<AbandonedCheckout/>}></Route>
               </Route>
 
 

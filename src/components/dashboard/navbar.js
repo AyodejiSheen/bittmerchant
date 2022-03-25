@@ -177,8 +177,9 @@ export const Dashnav = () => {
               </Accordion>
             </Link>
 
+            <Link to="orders" onClick={navhandler}>
             <Accordion
-              className="shadow-none"
+              className="shadow-none border-b"
               expanded={expanded === "panel1"}
               onChange={handleChange("panel1")}
             >
@@ -195,21 +196,22 @@ export const Dashnav = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <div class="text-sm">
-                  <Link to="#" className="block hover:bg-indigo-200 px-20 py-2">
+                  <Link to="" className="block hover:bg-indigo-200 px-20 py-2">
                     {" "}
                     Manual Orders
                   </Link>
-                  <Link to="#" className="block hover:bg-indigo-200 px-20 py-2">
+                  <Link to="draft" className="block hover:bg-indigo-200 px-20 py-2">
                     {" "}
                     Draft
                   </Link>
-                  <Link to="#" className="block hover:bg-indigo-200 px-20 py-2">
+                  <Link to="AbandonedCheckout" className="block hover:bg-indigo-200 px-20 py-2">
                     {" "}
                     Abandoned Checkouts
                   </Link>
                 </div>
               </AccordionDetails>
             </Accordion>
+          </Link>
 
             <Accordion
               expanded={expanded === "panel2"}
