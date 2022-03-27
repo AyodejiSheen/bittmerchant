@@ -40,15 +40,17 @@ import SetUp from './components/shop/setup'
 //Dashboard components
 import DashboardGuard from './components/dashboard/layout/dashboardGuard'
 import DashboardLayout from './components/dashboard/layout/dashboardLayout';
+import Home from './components/dashboard/layout/home';
+import Orders from './components/dashboard/orders/orders';
+import AbandonedCheckout from './components/dashboard/orders/abandonedCheckout';
+import Draft from './components/dashboard/orders/draft';
+
 
 
 
 //Error page
 import Errorpage from './404.js';
-import Home from './components/dashboard/layout/home';
-import Orders from './components/dashboard/orders/orders';
-import { Drafts } from '@mui/icons-material';
-import AbandonedCheckout from './components/dashboard/orders/abandonedCheckout';
+import { Products } from './components/dashboard/products/products';
 
 
 Aos.init({ duration: 1000 });
@@ -93,9 +95,13 @@ const App = () => {
               <Route path="/dashboard" element={<DashboardGuard> <DashboardLayout /> </DashboardGuard>} >
                   <Route index element={<Home/>}></Route> 
                   <Route path="orders" element={<Orders/>}></Route>
-                  <Route path="draft" element={<Drafts/>}></Route>
+                  <Route path="draft" element={<Draft/>}></Route>
                   <Route path="AbandonedCheckout" element={<AbandonedCheckout/>}></Route>
+                  <Route path="products" element={<Products/>}></Route>
               </Route>
+
+
+
 
 
               {/* Error page */}

@@ -12,15 +12,12 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const Dashnav = () => {
-
   //navbar
   const [isOpen, setIsOpen] = useState(false);
 
   const navhandler = () => {
     setIsOpen(!isOpen); //to toggle
   };
-
-
 
   // accordion
   const [expanded, setExpanded] = React.useState(false);
@@ -29,8 +26,7 @@ export const Dashnav = () => {
     setExpanded(isExpanded ? panel : false);
   };
 
-
-//dropdown 
+  //dropdown
   const [drop, setDrop] = useState(true);
 
   const handlenavdrop = (e) => {
@@ -97,9 +93,11 @@ export const Dashnav = () => {
                 <button
                   type="button"
                   className="flex mr-3 text-sm  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
-                  onClick={()=> handlenavdrop('option')}
+                  onClick={() => handlenavdrop("option")}
                 >
-                  <span className="font-regular text-xs md:text-sm ">Adeyemi Oluwasegun</span>
+                  <span className="font-regular text-xs md:text-sm ">
+                    Adeyemi Oluwasegun
+                  </span>
                   <img src={avatar} alt="avatar" className="w-8 rounded-full" />
                 </button>
 
@@ -138,7 +136,8 @@ export const Dashnav = () => {
                         to="#"
                         className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                       >
-                        <i class="fa-solid fa-right-from-bracket mr-4"></i> Sign out
+                        <i class="fa-solid fa-right-from-bracket mr-4"></i> Sign
+                        out
                       </Link>
                     </li>
                   </ul>
@@ -147,8 +146,6 @@ export const Dashnav = () => {
             </div>
           </div>
         </div>
-
-
 
         {/* side menu bar */}
 
@@ -165,300 +162,309 @@ export const Dashnav = () => {
 
             {/* Accordion nav start */}
 
-<div className="py-3">
-<Link to="/dashboard" onClick={navhandler}>
-              <Accordion className="shadow-none border-b" >
+            <div className="py-3">
+              <Link to="/dashboard" onClick={navhandler}>
+                <Accordion className="shadow-none border-b">
+                  <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10">
+                    <div className="space-x-8">
+                      <i className="fa-solid fa-house"></i>
+                      <span>Home</span>
+                    </div>
+                  </AccordionSummary>
+                </Accordion>
+              </Link>
+
+              <Link to="orders">
+                <Accordion
+                  className="shadow-none border-b"
+                  expanded={expanded === "panel1"}
+                  onChange={handleChange("panel1")}
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    className="focus:bg-indigo-700 focus:text-white font-semibold py-0 px-10"
+                  >
+                    <div className="space-x-8">
+                      <i className="fa-solid fa-cart-flatbed"></i>
+                      <span>Orders</span>
+                    </div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <div class="text-sm">
+                      <Link
+                        to=""
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Manual Orders
+                      </Link>
+                      <Link
+                        to="draft"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Draft
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                    </div>
+                  </AccordionDetails>
+                </Accordion>
+              </Link>
+
+              <Link to="products">
+                <Accordion
+                  expanded={expanded === "panel2"}
+                  onChange={handleChange("panel2")}
+                  className="shadow-none"
+                >
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    className="focus:bg-indigo-700 focus:text-white font-semibold  px-10"
+                  >
+                    <div className="space-x-8">
+                      <i className="fa-solid fa-tag"></i>
+                      <span>Products</span>
+                    </div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <div className="space-y-2 text-sm">
+                      <Link
+                        to="#"
+                        className="block hover:bg-indigo-200 px-20 py-2.5"
+                      >
+                        Inventory
+                      </Link>
+                      <Link
+                        to="#"
+                        className="block hover:bg-indigo-200 px-20 py-2.5"
+                      >
+                        Transfers
+                      </Link>
+                      <Link
+                        to="#"
+                        className="block hover:bg-indigo-200 px-20 py-2.5"
+                      >
+                        Collections
+                      </Link>
+                      <Link
+                        to="#"
+                        className="block hover:bg-indigo-200 px-20 py-2.5"
+                      >
+                        Gift Cards
+                      </Link>
+                    </div>
+                  </AccordionDetails>
+                </Accordion>
+              </Link>
+
+              <Accordion className="shadow-none">
                 <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10">
                   <div className="space-x-8">
-                    <i className="fa-solid fa-house"></i>
-                    <span>Home</span>
+                    <i className="fa-solid fa-user"></i>
+                    <span>Customers</span>
                   </div>
                 </AccordionSummary>
               </Accordion>
-            </Link>
 
-            <Link to="orders" onClick={navhandler}>
-            <Accordion
-              className="shadow-none border-b"
-              expanded={expanded === "panel1"}
-              onChange={handleChange("panel1")}
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="focus:bg-indigo-700 focus:text-white font-semibold py-0 px-10"
+              <Accordion
+                expanded={expanded === "panel3"}
+                onChange={handleChange("panel3")}
+                className="shadow-none"
               >
-                <div className="space-x-8">
-                  <i className="fa-solid fa-cart-flatbed"></i>
-                  <span>Orders</span>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <div class="text-sm">
-                  <Link to="" className="block hover:bg-indigo-200 px-20 py-2">
-                    {" "}
-                    Manual Orders
-                  </Link>
-                  <Link to="draft" className="block hover:bg-indigo-200 px-20 py-2">
-                    {" "}
-                    Draft
-                  </Link>
-                  <Link to="AbandonedCheckout" className="block hover:bg-indigo-200 px-20 py-2">
-                    {" "}
-                    Abandoned Checkouts
-                  </Link>
-                </div>
-              </AccordionDetails>
-            </Accordion>
-          </Link>
-
-            <Accordion
-              expanded={expanded === "panel2"}
-              onChange={handleChange("panel2")}
-              className="shadow-none"
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10"
-              >
-                <div className="space-x-8">
-                  <i className="fa-solid fa-tag"></i>
-                  <span>Products</span>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <div className="space-y-2 text-sm">
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Inventory
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Transfers
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Collections
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Gift Cards
-                  </Link>
-                </div>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion className="shadow-none">
-              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10">
-                <div className="space-x-8">
-                  <i className="fa-solid fa-user"></i>
-                  <span>Customers</span>
-                </div>
-              </AccordionSummary>
-            </Accordion>
-
-            <Accordion
-              expanded={expanded === "panel3"}
-              onChange={handleChange("panel3")}
-              className="shadow-none"
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
-              >
-                <div className="space-x-8">
-                <i class="fa-solid fa-wallet"></i>
-                  <span>Finances</span>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <div className="text-sm">
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Billing
-                  </Link>
-                </div>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              expanded={expanded === "panel4"}
-              onChange={handleChange("panel4")}
-              className="shadow-none"
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
-              >
-                <div className="space-x-8">
-                <i class="fa-solid fa-chart-simple"></i>
-                <span>Analytics</span>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <div className="space-y-2 text-sm">
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Reports
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Live View
-                  </Link>
-                </div>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              expanded={expanded === "panel5"}
-              onChange={handleChange("panel5")}
-              className="shadow-none"
-            >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
-              >
-                <div className="space-x-8">
-                <i class="fa-solid fa-bullhorn"></i>
-                                  <span>Marketing</span>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails>
-                <div className="space-y-2 text-sm">
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Campaigns
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Automations
-                  </Link>
-                </div>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion  className="shadow-none">
-              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
-                <div className="space-x-8">
-                  <i class="fa-solid fa-percent"></i>
-                  <span>Discounts</span>
-                </div>
-              </AccordionSummary>
-            </Accordion>
-
-            <Accordion className="shadow-none">
-              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
-                <div className="space-x-8">
-                  <i className="fa-solid fa-boxes-stacked"></i>
-                  <span>Apps</span>
-                </div>
-              </AccordionSummary>
-            </Accordion>
-
-            <Accordion className="mt-16 shadow-none">
-              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
-                <div className="flex justify-between items-center w-full">
-                  <div className="">Sales Channel</div>
-                  <div>
-                    {" "}
-                    <i className="fa-solid fa-circle-plus "></i>{" "}
-                  </div>
-                </div>
-              </AccordionSummary>
-            </Accordion>
-
-            <Accordion
-              expanded={expanded === "panel6"}
-              onChange={handleChange("panel6")}
-              className="shadow-none"
-            >
-              <AccordionSummary
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
-              >
-                <div className="flex justify-between items-center w-full">
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+                >
                   <div className="space-x-8">
-                    <i className="fa-solid fa-store"></i>
-                    <span className="">Online Store</span>
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Finances</span>
                   </div>
-                  <i className="fa-solid fa-eye"></i>
-                </div>
-              </AccordionSummary>
-              <AccordionDetails className="">
-                <div className="space-y-2 text-sm">
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Themes
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Blog Posts
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Pages
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Navigation
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block hover:bg-indigo-200 px-20 py-2.5"
-                  >
-                    Prefences
-                  </Link>
-                </div>
-              </AccordionDetails>
-            </Accordion>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className="text-sm">
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Billing
+                    </Link>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
 
+              <Accordion
+                expanded={expanded === "panel4"}
+                onChange={handleChange("panel4")}
+                className="shadow-none"
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+                >
+                  <div className="space-x-8">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Analytics</span>
+                  </div>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className="space-y-2 text-sm">
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Reports
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Live View
+                    </Link>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
 
-            <Accordion className="md:mt-16 shadow-none">
-              <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
-                <div className="space-x-8">
-                  <i className="fa-solid fa-gear"></i>
-                  <span>Settings</span>
-                </div>
-              </AccordionSummary>
-            </Accordion>
-</div>
+              <Accordion
+                expanded={expanded === "panel5"}
+                onChange={handleChange("panel5")}
+                className="shadow-none"
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+                >
+                  <div className="space-x-8">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>Marketing</span>
+                  </div>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className="space-y-2 text-sm">
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Campaigns
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Automations
+                    </Link>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
 
+              <Accordion className="shadow-none">
+                <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                  <div className="space-x-8">
+                    <i class="fa-solid fa-percent"></i>
+                    <span>Discounts</span>
+                  </div>
+                </AccordionSummary>
+              </Accordion>
+
+              <Accordion className="shadow-none">
+                <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                  <div className="space-x-8">
+                    <i className="fa-solid fa-boxes-stacked"></i>
+                    <span>Apps</span>
+                  </div>
+                </AccordionSummary>
+              </Accordion>
+
+              <Accordion className="mt-16 shadow-none">
+                <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                  <div className="flex justify-between items-center w-full">
+                    <div className="">Sales Channel</div>
+                    <div>
+                      {" "}
+                      <i className="fa-solid fa-circle-plus "></i>{" "}
+                    </div>
+                  </div>
+                </AccordionSummary>
+              </Accordion>
+
+              <Accordion
+                expanded={expanded === "panel6"}
+                onChange={handleChange("panel6")}
+                className="shadow-none"
+              >
+                <AccordionSummary
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 "
+                >
+                  <div className="flex justify-between items-center w-full">
+                    <div className="space-x-8">
+                      <i className="fa-solid fa-store"></i>
+                      <span className="">Online Store</span>
+                    </div>
+                    <i className="fa-solid fa-eye"></i>
+                  </div>
+                </AccordionSummary>
+                <AccordionDetails className="">
+                  <div className="space-y-2 text-sm">
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Themes
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Blog Posts
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Pages
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Navigation
+                    </Link>
+                    <Link
+                      to="#"
+                      className="block hover:bg-indigo-200 px-20 py-2.5"
+                    >
+                      Prefences
+                    </Link>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+
+              <Accordion className="md:mt-16 shadow-none">
+                <AccordionSummary className="focus:bg-indigo-700 focus:text-white font-semibold  px-10 ">
+                  <div className="space-x-8">
+                    <i className="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                  </div>
+                </AccordionSummary>
+              </Accordion>
+            </div>
           </div>
 
           {/* End of side bar */}

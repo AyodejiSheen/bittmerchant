@@ -14,6 +14,7 @@ import payment from "../../../media/home/payment.svg";
 const Home = () => {
   // for nav tabs
   const [active, setActive] = useState("tab1");
+  
   const handleChange = (value) => {
     setActive(value);
   };
@@ -405,7 +406,6 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* section 3 */}
 
       <section className="mx-auto md:3/4  lg:w-11/12 xl:w-10/12  2xl:w-2/3  ">
@@ -521,17 +521,15 @@ const Home = () => {
         </div>
       </section>
 
+      {/* section 4 */}
 
-
-        {/* section 4 */}
-
-        <section className="mx-auto md:3/4  lg:w-11/12 xl:w-10/12  2xl:w-2/3  ">
+      <section className="mx-auto md:3/4  lg:w-11/12 xl:w-10/12  2xl:w-2/3  ">
         <div className="block lg:flex flex-wrap items-stretch justify-between space-y-6 lg:space-y-12 xl:space-y-0">
           <div className="xl:w-1/2 relative">
             <div className="space-y-3 p-5 md:p-8 h:52 xl:h-60 bg-white xl:mr-2 shadow-md rounded-lg">
               <div className=" flex items-center justify-between space-x-10">
                 <h4 className="font-semibold text-sm md:text-base">
-                Choose the way your store accepts payments
+                  Choose the way your store accepts payments
                 </h4>
                 <button
                   type="button"
@@ -571,7 +569,8 @@ const Home = () => {
               </div>
               <div className="space-y-4">
                 <p className="text-xs md:text-sm font-thin ">
-                     Enable a payment provider so your customers can check out and you can get paid.
+                  Enable a payment provider so your customers can check out and
+                  you can get paid.
                 </p>
 
                 <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
@@ -581,12 +580,11 @@ const Home = () => {
             </div>
           </div>
 
-
           <div className="xl:w-1/2">
             <div className="space-y-3 p-5 md:p-8 h:52  xl:h-60 self-stretch bg-white xl:ml-2 shadow-md rounded-lg">
               <div className="  flex items-center justify-between relative space-x-6">
                 <h4 className="font-semibold text-sm md:text-base">
-                Add a shipping policy to build trust with customers
+                  Add a shipping policy to build trust with customers
                 </h4>
                 <button
                   type="button"
@@ -624,18 +622,23 @@ const Home = () => {
               </div>
               <div className="space-y-4">
                 <p className="text-xs md:text-sm font-thin ">
-                64% of customers look for shipping costs on the product page. Easy-to-find shipping details encourage them to shop with you.
+                  64% of customers look for shipping costs on the product page.
+                  Easy-to-find shipping details encourage them to shop with you.
                 </p>
-
                 <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
                   Add Shipping Policy
-                </button> <a href="#" className="text-xs ml-6 text-indigo-400 underline hover:text-indigo-700">Learn more</a>
+                </button>{" "}
+                <a
+                  href="#"
+                  className="text-xs ml-6 text-indigo-400 underline hover:text-indigo-700"
+                >
+                  Learn more
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* SECTION 5 */}
       <section
@@ -653,7 +656,7 @@ const Home = () => {
             <div className="space-y-3">
               <div className="px-5 md:px-12  flex items-center justify-between">
                 <h4 className="font-semibold text-sm md:text-base">
-                Ready to customize your store?
+                  Ready to customize your store?
                 </h4>
                 <button
                   className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
@@ -698,7 +701,8 @@ const Home = () => {
               </div>
               <div className="px-5 md:px-12 space-y-4">
                 <p className="text-xs md:text-sm font-thin ">
-                We’ve got thousands of free and premium apps for whatever added features or functionality your online store needs.
+                  We’ve got thousands of free and premium apps for whatever
+                  added features or functionality your online store needs.
                 </p>
 
                 <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-indigo-700 hover:text-white">
@@ -710,87 +714,85 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* section 6 */}
 
-
-<section   className="mx-auto  md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3 shadow-md rounded-lg bg-white p-8"
-        data-aos="fade-down">
-
-          <div className="text-right">
+      <section
+        className="mx-auto  md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3 shadow-md rounded-lg bg-white p-8"
+        data-aos="fade-down"
+      >
+        <div className="text-right">
           <button
-                  className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
-                  onClick={() => handledrop("drop8")}
-                >
-                  <i className="fa-solid fa-ellipsis "></i>
-                </button>
+            className="mr-3 text-xl  md:mr-0 space-x-4 items-center focus:outline-none dark:focus:ring-gray-600"
+            onClick={() => handledrop("drop8")}
+          >
+            <i className="fa-solid fa-ellipsis "></i>
+          </button>
 
-                <div
-                  hidden={drop !== "drop8"}
-                  className=" absolute right-0 md:top-0 z-50 my-4 text-base text-left list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-                >
-                  <div className="md:py-3 md:px-4">
-                    <ul className="py-1" aria-labelledby="dropdown">
-                      <li>
-                        <div
-                          onClick={handledrop}
-                          className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
-                        </div>
-                      </li>
-                      <li>
-                        <Link
-                          to="/shop"
-                          className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          <i class="fa-solid fa-eye mr-3"></i> View Transcript
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="sigin"
-                          className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                        >
-                          <i class="fa-solid fa-comment-dots mr-3"></i>Feedback
-                        </Link>
-                      </li>
-                    </ul>
+          <div
+            hidden={drop !== "drop8"}
+            className=" absolute right-0 md:top-0 z-50 my-4 text-base text-left list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <div className="md:py-3 md:px-4">
+              <ul className="py-1" aria-labelledby="dropdown">
+                <li>
+                  <div
+                    onClick={handledrop}
+                    className="block py-2 px-4 text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >
+                    <i className="fa-solid fa-xmark mr-3 "></i> Dismiss
                   </div>
-                </div>
+                </li>
+                <li>
+                  <Link
+                    to="/shop"
+                    className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >
+                    <i class="fa-solid fa-eye mr-3"></i> View Transcript
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="sigin"
+                    className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >
+                    <i class="fa-solid fa-comment-dots mr-3"></i>Feedback
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
+        </div>
 
+        <div className="text-center">
+          <img
+            src={photo}
+            alt="photo"
+            className=" mx-auto pb-5 w-80 md:w-1/2"
+          />
 
-          <div className="text-center">
-              <img src={photo} alt="photo" className=" mx-auto pb-5 w-80 md:w-1/2"/>
+          <h4 className="font-semibold text-sm md:text-base">
+            Ready to customize your store?
+          </h4>
 
-              <h4 className="font-semibold text-sm md:text-base">
-                Ready to customize your store?
-                </h4>
+          <p className="text-xs md:text-sm font-thin mt-1">
+            Search over 1000 stunning photos and download them for free.
+          </p>
 
-                <p className="text-xs md:text-sm font-thin mt-1">
-                Search over 1000 stunning photos and download them for free.
-                </p>
+          <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-indigo-700 hover:text-white mt-5">
+            Search Photos
+          </button>
+        </div>
+      </section>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-indigo-700 hover:text-white mt-5">
-                  Search Photos
-                </button>
+      {/* section 7 */}
 
-          </div>
-
-</section>
-
-
-
-        {/* section 7 */}
-
-        <section className="mx-auto md:3/4  lg:w-11/12 xl:w-10/12  2xl:w-2/3  ">
+      <section className="mx-auto md:3/4  lg:w-11/12 xl:w-10/12  2xl:w-2/3  ">
         <div className="block lg:flex flex-wrap items-stretch justify-between space-y-6 lg:space-y-12 xl:space-y-0">
           <div className="xl:w-1/2 relative">
             <div className="space-y-3 p-5 md:p-8 h:52 xl:h-60 bg-white xl:mr-2 shadow-md rounded-lg">
               <div className=" flex items-center justify-between space-x-10">
                 <h4 className="font-semibold text-sm md:text-base">
-                Get to know Shopify with guided video tutorials
+                  Get to know Shopify with guided video tutorials
                 </h4>
                 <button
                   type="button"
@@ -830,7 +832,8 @@ const Home = () => {
               </div>
               <div className="space-y-4">
                 <p className="text-xs md:text-sm font-thin ">
-                Keep learning with new and upcoming videos by subscribing to the Shopify Help Center YouTube Channel.
+                  Keep learning with new and upcoming videos by subscribing to
+                  the Shopify Help Center YouTube Channel.
                 </p>
 
                 <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
@@ -840,12 +843,11 @@ const Home = () => {
             </div>
           </div>
 
-
           <div className="xl:w-1/2">
             <div className="space-y-3 p-5 md:p-8 h:52  xl:h-60 self-stretch bg-white xl:ml-2 shadow-md rounded-lg">
               <div className="  flex items-center justify-between relative space-x-6">
                 <h4 className="font-semibold text-sm md:text-base">
-                Tipping at checkout is now available for your online store
+                  Tipping at checkout is now available for your online store
                 </h4>
                 <button
                   type="button"
@@ -883,58 +885,23 @@ const Home = () => {
               </div>
               <div className="space-y-4">
                 <p className="text-xs md:text-sm font-thin ">
-                With tipping at checkout, your customers have the option to tip a percentage of their total order or custom amount.
+                  With tipping at checkout, your customers have the option to
+                  tip a percentage of their total order or custom amount.
                 </p>
-
                 <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
-                  Add Online Tipping 
-                </button> <a href="#" className="text-xs ml-6 text-indigo-400 underline hover:text-indigo-700">Learn more</a>
+                  Add Online Tipping
+                </button>{" "}
+                <a
+                  href="#"
+                  className="text-xs ml-6 text-indigo-400 underline hover:text-indigo-700"
+                >
+                  Learn more
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
   );
 };
