@@ -46,7 +46,7 @@ export const Products = () => {
 
     {/* table begin */}
 
-        <section className="shadow bg-white px-6 py-2 text-sm ">
+        <section className="shadow bg-white px-6 pt-2 pb-5 text-sm ">
             <div className="space-x-8 border-b">
                 <button className="focus:border-b-2 border-indigo-700 px-3 py-3" onClick={() => handleChange('tab1')}>All</button>
                 <button className="focus:border-b-2 border-indigo-700 px-3 py-3" onClick={() => handleChange('tab2')}>Active</button>
@@ -74,8 +74,8 @@ export const Products = () => {
                   </div>
 
                     
-                  <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-6">
-                    <table className="w-full text-sm text-left">
+                  <div className="relative  shadow-md sm:rounded-lg mt-6">
+                    <table className="text-sm text-left">
                       <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 font-medium">                  
                         <tr>
                         <th scope="col" className="px-6 py-3 w-10"><input type="checkbox" className="focus:ring-0 rounded"/></th>
@@ -88,6 +88,7 @@ export const Products = () => {
                       </thead>
 
                       <tbody className="cursor-pointer">
+
                           <tr className="bg-white border-b">
                             <th scope="col" className="px-6 py-3"><input type="checkbox" className="focus:ring-0 rounded"/></th>
                             <td className="px-6 py-3 flex items-center space-x-6 font-medium">
@@ -99,7 +100,24 @@ export const Products = () => {
                             <td className="px-6 py-3">
                               <div className="bg-emerald-300 w-16 text-center rounded-full text-xs py-1.5">Active</div>
                             </td>
-                            <td className="px-6 py-3">0 in stock</td>
+                            <td className="px-6 py-3 text-red-600">0 in stock</td>
+                            <td className="px-6 py-3 ">kicks</td>
+                            <td className="px-6 py-3">Tets</td>
+                          </tr>
+
+
+                          <tr className="bg-white border-b">
+                            <th scope="col" className="px-6 py-3"><input type="checkbox" className="focus:ring-0 rounded"/></th>
+                            <td className="px-6 py-3 flex items-center space-x-6 font-medium">
+                              <img src={product1} className="w-8" /> <span className="hover:font-semibold hover:text-black hover:underline" onMouseOver={()=> handleView('view2')} onMouseLeave={hideView}>Cool Sneakers</span>
+                              <div hidden={hide !== "view2"} className="absolute translate-x-48">
+                              <i class="fa-solid fa-eye"></i>
+                              </div>
+                            </td>
+                            <td className="px-6 py-3">
+                              <div className="bg-emerald-300 w-16 text-center rounded-full text-xs py-1.5">Active</div>
+                            </td>
+                            <td className="px-6 py-3 text-slate-500">Inventory not tracked</td>
                             <td className="px-6 py-3 ">kicks</td>
                             <td className="px-6 py-3">Tets</td>
                           </tr>
