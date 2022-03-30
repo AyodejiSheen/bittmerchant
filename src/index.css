@@ -35,6 +35,11 @@ body .font-sans{
   background-color: #E9EDF1;
 } */
 
+
+.table-scroll{
+  overflow-x: scroll;
+}
+
  .active:focus{
   color: #5145cd!important;
   border-left-color: #5145cd!important;

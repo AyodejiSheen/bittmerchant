@@ -30,7 +30,11 @@ export const Products = () => {
 
   return (
     <>
-      <main className="my-24 px-6 md:px-12  h-screen">
+
+
+
+    
+      <main className="my-24 px-6 md:px-12  h-screen ">
 
           {/* upper section */}
             <div className="flex items-center justify-between pb-10 border-b">
@@ -74,8 +78,8 @@ export const Products = () => {
                   </div>
 
                     
-                  <div className="relative  shadow-md sm:rounded-lg mt-6">
-                    <table className="text-sm text-left">
+                  <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-6 ">
+                    <table className=" w-full text-sm text-left">
                       <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 font-medium">                  
                         <tr>
                         <th scope="col" className="px-6 py-3 w-10"><input type="checkbox" className="focus:ring-0 rounded"/></th>
@@ -126,6 +130,8 @@ export const Products = () => {
                       </tbody>
                     </table>
                   </div>
+
+                  
 
 
 

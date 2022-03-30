@@ -27,7 +27,7 @@ const Home = () => {
   };
 
   return (
-    <main className="my-24  px-5 space-y-6 md:space-y-8 lg:space-y-12">
+    <main className="my-24 px-5 space-y-6 md:space-y-8 lg:space-y-12">
       {/* SECTION 1 */}
       <section
         className="mx-auto  md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3 shadow-md rounded-lg bg-white"
