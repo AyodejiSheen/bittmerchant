@@ -4,7 +4,7 @@ import main from "../../../media/order/main.svg";
 const Draft = () => {
   return (
     <>
-      <main className="my-24   px-6 md:px-12  h-screen">
+      <main className="my-24   px-6 md:px-12 ">
         <section className="space-y-6 md:space-y-8 lg:space-y-8">
           <h4 className="md:text-xl font-medium pt-4">Drafts</h4>
 

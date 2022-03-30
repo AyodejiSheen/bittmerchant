@@ -38,7 +38,7 @@ export const Dashnav = () => {
       {/* top menu */}
       <div className="relative text-sm md:text-base">
         {/* Desktop Menus */}
-        <div className="bg-slate-200 fixed w-full z-50">
+        <div className="bg-slate-200 fixed w-full z-40">
           <div className="flex flex-wrap items-center py-2 lg:py-4">
             <div className="w-1/2 md:px-5 flex flex-wrap items-center space-x-4">
               <img src={Logo} alt="LOGO" className="w-8 hidden lg:block" />
@@ -151,7 +151,7 @@ export const Dashnav = () => {
 
         <div className="flex flex-wrap">
           <div
-            className={` backdrop-blur-lg overflow-scroll md:w-80 xl:w-96 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={` backdrop-blur-lg overflow-y-scroll shadow-2xl md:w-80 xl:w-96 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -471,7 +471,7 @@ export const Dashnav = () => {
 
           {/* main Contents */}
 
-          <div className="w-full bg-slate-100 h-full lg:ml-80 xl:ml-96 z-30">
+          <div className="w-full bg-slate-100 min-h-screen lg:ml-80 xl:ml-96 z-30">
             <Outlet />
           </div>
         </div>

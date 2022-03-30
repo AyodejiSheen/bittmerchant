@@ -12,19 +12,30 @@ export const Products = () => {
     // for nav tabs
     const [active, setActive] = useState("tab1");
     const [hide, setHide] = useState(false);
+    const [acc, setAcc] = useState(false)
   
     const handleChange = (value) => {
       setActive(value);
       console.log(active)
     };
   
+    // for eye
     const handleView = (value) => {
       setHide(value)
     }
 
+    // to hide eye
     const hideView = () => {
       setHide(false)
     }
+
+
+    // for more filter accordion
+    const handleAcc = () => {
+      setAcc(!acc);
+      console.log("am clicked")
+    }
+
 
 
 
@@ -34,7 +45,7 @@ export const Products = () => {
 
 
     
-      <main className="my-24 px-6 md:px-12  h-screen ">
+      <main className="my-24 px-6 md:px-12">
 
           {/* upper section */}
             <div className="flex items-center justify-between pb-10 border-b">
@@ -62,13 +73,13 @@ export const Products = () => {
             <div className=" mt-5">
               <div hidden={active !== 'tab1'} className="">
                 <div>
-                  <div className="flex flex-wrap  justify-between font-medium">
+                  <div className="flex justify-between font-medium">
                   <input type="search" placeholder="Filter products" className="rounded-md text-sm w-1/2"/>
                   <div className="flex flex-wrap">
-                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all rounded-l-md">Product vendor </div>
-                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all">Tagged with</div>
-                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all ">Status</div>
-                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all rounded-r-md">More filters</div>
+                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all rounded-l-md">Product vendor <i className="ml-3 fa-solid fa-caret-down"></i> </div>
+                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all">Tagged with  <i className="ml-3 fa-solid fa-caret-down"></i> </div>
+                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all ">Status  <i className="ml-3 fa-solid fa-caret-down"></i></div>
+                      <div className="border py-2.5  px-4 cursor-pointer hover:bg-slate-50 transition-all rounded-r-md" onClick={handleAcc}>More filters</div>
                   </div>
 
                   <div className="flex flex-wrap">
@@ -115,7 +126,7 @@ export const Products = () => {
                             <td className="px-6 py-3 flex items-center space-x-6 font-medium">
                               <img src={product1} className="w-8" /> <span className="hover:font-semibold hover:text-black hover:underline" onMouseOver={()=> handleView('view2')} onMouseLeave={hideView}>Cool Sneakers</span>
                               <div hidden={hide !== "view2"} className="absolute translate-x-48">
-                              <i class="fa-solid fa-eye"></i>
+                              <i className="fa-solid fa-eye"></i>
                               </div>
                             </td>
                             <td className="px-6 py-3">
@@ -131,9 +142,10 @@ export const Products = () => {
                     </table>
                   </div>
 
-                  
 
 
+
+        
 
 
 
@@ -179,6 +191,17 @@ export const Products = () => {
               <div hidden={active !== 'tab3'}>tab 3</div>
               <div hidden={active !== 'tab4'}>tab 4</div>
             </div>
+
+
+                  {/* More filter Accordion */}
+
+                  <div             className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-96 md:h-full bg-white/30 mt-5 min-h-screen  inset-y-0 right-0 top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 ${ acc ? "translate-x-0" : "translate-x-full"}`}>
+
+                    <button className="bg-indigo-700 text-white mt-48" onClick={handleAcc}>close</button>
+                    <p>Welcome</p>
+                  </div>
+
+                  
         </section>
 
 
