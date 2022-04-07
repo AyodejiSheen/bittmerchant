@@ -151,7 +151,7 @@ export const Dashnav = () => {
 
         <div className="flex flex-wrap">
           <div
-            className={` backdrop-blur-lg overflow-y-scroll shadow-2xl md:w-80 xl:w-96 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={` backdrop-blur-lg overflow-y-scroll shadow-2xl md:w-80 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -209,7 +209,7 @@ export const Dashnav = () => {
                       </Link>
                       <Link
                         to="AbandonedCheckout"
-                        className="block hover:bg-indigo-200 px-20 py-2"
+                        className="block hover:bg-indigo-200 pl-20 py-2"
                       >
                         {" "}
                         Abandoned Checkouts
@@ -471,7 +471,7 @@ export const Dashnav = () => {
 
           {/* main Contents */}
 
-          <div className="w-full bg-slate-100 min-h-screen lg:ml-80 xl:ml-96 z-30">
+          <div className="w-full bg-slate-100 min-h-screen lg:ml-80 z-30">
             <Outlet />
           </div>
         </div>

@@ -6,7 +6,7 @@ const AbandonedCheckout = () => {
     <>
       <main className="my-24   px-6 md:px-12 ">
         <section className="space-y-6 md:space-y-8 lg:space-y-8">
-          <h4 className="md:text-xl font-medium pt-4">Abandoned Checkouts</h4>
+          <h4 className="text-lg md:text-xl font-medium pt-4">Abandoned Checkouts</h4>
 
           <div className="text-center bg-white rounded-xl shadow-lg py-20">
             <div className="w-full md:w-2/3 lg:w-1/2 xl:w-2/4 2xl:w-1/3 mx-auto space-y-4 px-4 md:px-0">
