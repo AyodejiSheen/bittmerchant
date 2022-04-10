@@ -70,9 +70,6 @@ export const Products = () => {
 
   return (
     <>
-
-
-
     
       <main className="my-24 px-6 md:px-12">
 
@@ -84,12 +81,13 @@ export const Products = () => {
                     <p className="hidden md:inline-block">Export</p>
                     <p className="hidden md:inline-block">Import</p>
 
-                    <button className="md:hidden border px-4  rounded-md" onClick={() => handledrop('action')}> <i className=" text-2xl fa-solid fa-ellipsis "></i>
+                  <div>
+                    <button className="md:hidden border px-4  rounded-md" onClick={() => handledrop('action')}> <i className=" text-2xl fa-solid fa-ellipsis "></i> </button>
                     <div  hidden={drop !== "action"} className="absolute shadow bg-white -ml-6  z-40 rounded-md space-y-2.5 ">
                       <div className="border-b py-2 px-4"> <button>Import</button></div>
                       <div className="border-b py-2 px-4"><button>Export</button></div>
                       </div>
-                    </button>
+                   </div>
 
                     <button className="bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-900">Add Product</button>
                 </div>
@@ -98,8 +96,8 @@ export const Products = () => {
 
     {/* table begin */}
 
-        <section className="shadow bg-white px-6 pt-2 pb-5 text-sm ">
-            <div className=" space-x-4 md:space-x-8 border-b">
+        <section className="shadow bg-white px-3 md:px-6 pt-2 pb-5 text-sm ">
+            <div className=" space-x-2 md:space-x-8 border-b">
                 <button className="focus:border-b-2 border-indigo-700 px-3 py-3" onClick={() => handleChangeNavTab('tab1')}>All</button>
                 <button className="focus:border-b-2 border-indigo-700 px-3 py-3" onClick={() => handleChangeNavTab('tab2')}>Active</button>
                 <button className="focus:border-b-2 border-indigo-700 px-3 py-3" onClick={() => handleChangeNavTab('tab3')}>Draft</button>
@@ -111,10 +109,11 @@ export const Products = () => {
               <div hidden={active !== 'tab1'} className="">
                 <div>
                   <div className="md:flex flex-wrap space-y-4 md:space-y-0 justify-between font-medium">
-                  <input type="search" placeholder="Filter products" className="rounded-md text-xs md:text-xs xl:text-sm w-full md:w-1/4 lg:w-1/5 xl:w-80 2xl:w-1/2"/>
-                  <div className="flex flex-wrap">
-                      <div className="border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm cursor-pointer hover:bg-slate-50 transition-all rounded-l-md" onClick={() => handledrop('vendor')}>Product vendor <i className="ml-3 fa-solid fa-caret-down"></i>                   
-                  <div  hidden={drop !== "vendor"} className="absolute shadow text-xs bg-white -ml-6 py-5 px-4 z-40 rounded-md space-y-2.5 ">
+                  <input type="search" placeholder="Filter products" className="rounded-md text-xs md:text-xs xl:text-sm w-full md:w-1/3 lg:w-1/4 xl:w-80 2xl:w-1/2"/>
+                  <div className="flex flex-wrap  justify-between">
+                      <div>
+                        <div className="border py-2.5 px-4 md:px-3 2xl:px-4 text-xs xl:text-sm  cursor-pointer hover:bg-slate-50 transition-all rounded-l-md" onClick={() => handledrop('vendor')}>Product vendor <i className="ml-3 fa-solid fa-caret-down"></i> </div>                  
+                      <div  hidden={drop !== "vendor"} className="absolute shadow text-xs bg-white -ml-6 py-5 px-4 z-40 rounded-md space-y-2.5 ">
                       <div><input type="radio" className="focus:ring-0 mr-2"/> Great Phone Store</div>
                       <div><input type="radio" className="focus:ring-0 mr-2"/> Tets</div>
                       <div><input type="radio" className="focus:ring-0 mr-2"/> Shopify</div>
@@ -122,16 +121,16 @@ export const Products = () => {
                   </div> 
                   </div>
 
-
-
-                      <div className="hidden md:inline-block border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm cursor-pointer hover:bg-slate-50 transition-all" onClick={() => handledrop('tagged')}>Tagged with  <i className="ml-3 fa-solid fa-caret-down"></i> 
+                      <div>
+                        <div className="hidden md:inline-block border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm cursor-pointer hover:bg-slate-50 transition-all" onClick={() => handledrop('tagged')}>Tagged with  <i className="ml-3 fa-solid fa-caret-down"></i> </div>
                           <div  hidden={drop !== "tagged"} className="absolute shadow text-xs bg-white -ml-6 py-5 px-4 z-40 rounded-md space-y-2.5 ">
-                          <input type="text" className="border w-full rounded-md border-slate-300"/>
+                          <input type="text" className="border w-full rounded-md border-slate-300 text-xs xl:text-sm"/>
                           <button className="font-light bg-indigo-700 text-white px-3 rounded py-1">Clear</button>
                       </div>                       
                       </div>
 
-                      <div className="md:hidden border py-2.5  xl:px-3 2xl:px-4 cursor-pointer hover:bg-slate-50  px-4 "  onClick={() => handledrop('sort')}>Sort
+                      <div>
+                        <div className="md:hidden border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm  cursor-pointer hover:bg-slate-50"  onClick={() => handledrop('sort')}>Sort</div>
                       <div  hidden={drop !== "sort"} className="absolute shadow text-xs bg-white -ml-28 py-5 px-4 z-40 rounded-md space-y-2.5 w-max">
                         <p>Sort  by</p>
                       <div><input type="radio" className="focus:ring-0 mr-2"/> Product title A-Z</div>
@@ -151,7 +150,8 @@ export const Products = () => {
                       </div>
 
 
-                      <div className="hidden md:inline-block border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm  cursor-pointer hover:bg-slate-50 transition-all " onClick={() => handledrop('status')}>Status  <i className="ml-3 fa-solid fa-caret-down"></i>
+                      <div>
+                        <div className="hidden md:inline-block border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm  cursor-pointer hover:bg-slate-50 transition-all " onClick={() => handledrop('status')}>Status  <i className="ml-3 fa-solid fa-caret-down"></i></div>
                       <div  hidden={drop !== "status"} className="absolute shadow text-xs bg-white -ml-6 py-5 px-4 z-40 rounded-md space-y-2.5 ">
                       <div><input type="checkbox" className="rounded focus:ring-0 mr-2"/> Active</div>
                       <div><input type="checkbox" className="rounded focus:ring-0 mr-2"/> Draft</div>
@@ -169,13 +169,16 @@ export const Products = () => {
                       <div className="border py-2.5  px-4 md:px-3 2xl:px-4 text-xs xl:text-sm  cursor-pointer hover:bg-slate-50 transition-all rounded-r-md" onClick={handleAcc}>More filters</div>
                   </div>
 
+
+
                   <div className="xl:flex flex-wrap hidden">
                       <div className="border py-2.5 xl:px-3  2xl:px-4 cursor-pointer hover:bg-slate-50  px-4 rounded-l-md" >Saved</div>
 
 
 
-                      <div className="border py-2.5  xl:px-3 2xl:px-4 cursor-pointer hover:bg-slate-50  px-4 rounded-r-md"  onClick={() => handledrop('sort')}>Sort
-                      <div  hidden={drop !== "sort"} className="absolute shadow text-xs bg-white -ml-28 py-5 px-4 z-40 rounded-md space-y-2.5 w-max">
+                      <div>
+                        <div className="border py-2.5  xl:px-3 2xl:px-4 cursor-pointer hover:bg-slate-50  px-4 rounded-r-md"  onClick={() => handledrop('sort2')}>Sort</div>
+                      <div  hidden={drop !== "sort2"} className="absolute shadow text-xs bg-white -ml-28 py-5 px-4 z-40 rounded-md space-y-2.5 w-max">
                         <p>Sort  by</p>
                       <div><input type="radio" className="focus:ring-0 mr-2"/> Product title A-Z</div>
                       <div><input type="radio" className="focus:ring-0 mr-2"/> Product title Z-A</div>
@@ -301,15 +304,16 @@ export const Products = () => {
 
                   {/* More filter Accordion */}
 
-                  <div className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-96 md:h-full bg-white/30 mt-5 min-h-screen  inset-y-0 right-0 top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 ${ acc ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-96 md:h-full bg-white/30 mt-5 min-h-screen  inset-y-0 right-0 top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 ${ acc ? "translate-x-0" : "translate-x-full"}`}>
 
-                  <div className="px-10 space-x-8">
-                  <button className=" border px-4 py-2 hover:bg-indigo-700 hover:text-white">Clear filter</button>
-                    <button className="bg-red-700 text-white px-4 py-2" onClick={handleAcc}>Close</button>
+
+                  <div className="px-10 items-center space-x-8 border-b flex flex-wrap justify-between">
+                    <p className="text-lg ">More filters</p>
+                    <button className="text-lg border px-8 py-2" onClick={handleAcc}> x </button>
                   </div>
 
 
-                  <div className="py-3">
+                  <div className="bg-white/30 h-1/2 fixed overflow-y-scroll">
 
                 <Accordion
                   className="shadow-none border-b"
@@ -342,6 +346,111 @@ export const Products = () => {
                       >
                         {" "}
                         Draft
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
+                      </Link>
+                      <Link
+                        to="AbandonedCheckout"
+                        className="block hover:bg-indigo-200 px-20 py-2"
+                      >
+                        {" "}
+                        Abandoned Checkouts
                       </Link>
                       <Link
                         to="AbandonedCheckout"
@@ -552,6 +661,14 @@ export const Products = () => {
                 </AccordionDetails>
               </Accordion>
             </div>
+
+    
+            <div className="px-10 space-x-8 border-t mt-96 flex flex-wrap justify-between">
+                   <button className="border bg-slate-100 px-4 py-2.5">Clear all filters</button>
+                  <button className="bg-emerald-700 text-white px-7  rounded-md py-2.5">Done</button>
+            </div>
+
+
     
 
 
