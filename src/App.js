@@ -51,6 +51,7 @@ import Draft from './components/dashboard/orders/draft';
 //Error page
 import Errorpage from './404.js';
 import { Products } from './components/dashboard/products/products';
+import { AddNewProduct } from './components/dashboard/products/new';
 
 
 Aos.init({ duration: 1000 });
@@ -98,6 +99,7 @@ const App = () => {
                   <Route path="draft" element={<Draft/>}></Route>
                   <Route path="AbandonedCheckout" element={<AbandonedCheckout/>}></Route>
                   <Route path="products" element={<Products/>}></Route>
+                  <Route path="products/addnewproduct" element={<AddNewProduct/>}></Route>
               </Route>
 
 
