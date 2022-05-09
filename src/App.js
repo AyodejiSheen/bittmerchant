@@ -52,6 +52,9 @@ import Draft from './components/dashboard/orders/draft';
 import Errorpage from './404.js';
 import { Products } from './components/dashboard/products/products';
 import { AddNewProduct } from './components/dashboard/products/new';
+import { ProfileNav } from './components/profile/navbar';
+import { General } from './components/profile/general';
+import { Security } from './components/profile/security';
 
 
 Aos.init({ duration: 1000 });
@@ -93,13 +96,19 @@ const App = () => {
 
 
               {/* Dashboard Layout route */}
-              <Route path="/dashboard" element={<DashboardGuard> <DashboardLayout /> </DashboardGuard>} >
+              <Route path="dashboard/" element={<DashboardGuard> <DashboardLayout /> </DashboardGuard>} >
                   <Route index element={<Home/>}></Route> 
                   <Route path="orders" element={<Orders/>}></Route>
                   <Route path="draft" element={<Draft/>}></Route>
                   <Route path="AbandonedCheckout" element={<AbandonedCheckout/>}></Route>
                   <Route path="products" element={<Products/>}></Route>
                   <Route path="products/addnewproduct" element={<AddNewProduct/>}></Route>
+              </Route>
+
+
+              <Route path="profile/" element={<ProfileNav/>}>
+                  <Route index element={<General/>}></Route>
+                  <Route path='security' element={<Security/>}></Route>
               </Route>
 
 

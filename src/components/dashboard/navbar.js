@@ -103,16 +103,16 @@ export const Dashnav = () => {
 
                 <div
                   hidden={drop}
-                  className="z-20 my-4 text-base absolute top-8 right-2 list-none w-40 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  className="z-20 my-4 text-base absolute top-8 right-2 list-none w-62 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                   id="dropdown"
                 >
                   <ul class="py-1" aria-labelledby="dropdown">
                     <li>
                       <Link
-                        to="#"
+                        to="/profile"
                         className="block py-2 px-4  text-xs md:text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                       >
-                        <i class="fa-solid fa-grip mr-4"></i> Dashboard
+                        <i class="fa-solid fa-grip mr-4"></i> Manage Account
                       </Link>
                     </li>
                     <li>
