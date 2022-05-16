@@ -55,6 +55,7 @@ import { AddNewProduct } from './components/dashboard/products/new';
 import { ProfileNav } from './components/profile/navbar';
 import { General } from './components/profile/general';
 import { Security } from './components/profile/security';
+import { SettingsNav } from './components/settings/navbar';
 
 
 Aos.init({ duration: 1000 });
@@ -109,6 +110,10 @@ const App = () => {
               <Route path="profile/" element={<ProfileNav/>}>
                   <Route index element={<General/>}></Route>
                   <Route path='security' element={<Security/>}></Route>
+              </Route>
+
+              <Route path="settings/" element={<SettingsNav/>}>
+
               </Route>
 
 

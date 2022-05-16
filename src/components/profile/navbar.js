@@ -45,9 +45,11 @@ return(
         {/* Desktop Menus */}
         <div className="bg-slate-200 fixed w-full z-40">
           <div className="flex flex-wrap items-center py-2 lg:py-4">
-            <div className="w-1/2 md:px-5 flex flex-wrap items-center space-x-4">
-              <img src={Logo} alt="LOGO" className="w-8 hidden lg:block" />
-              <p className="hidden lg:block">Merchantplace</p>
+          <div className="w-1/2 md:px-5  ">
+              <Link to="/dashboard" className="flex flex-wrap items-center space-x-4">
+                <img src={Logo} alt="LOGO" className="w-8 hidden lg:block" />
+                <p className="hidden lg:block">Merchantplace</p>
+              </Link>
 
               {/* hamburger */}
               <div className=" lg:hidden">
@@ -156,7 +158,7 @@ return(
 
         <div className="flex flex-wrap">
           <div
-            className={` backdrop-blur-lg overflow-y-scroll shadow-2xl md:w-80 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-12 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
+            className={` backdrop-blur-lg overflow-y-scroll shadow-2xl md:w-80 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-11 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -167,7 +169,7 @@ return(
 
             <div className=' py-6 space-y-10'>
                 <Link to="/profile" >
-                    <button className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-4 focus:border-l-4 focus:border-indigo-700" >
+                    <button className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-4 focus:border-l-8 focus:border-indigo-700" >
                     <i class="fa-solid fa-circle-user text-2xl"></i>
                       <span>General</span>
                     </button>
@@ -175,7 +177,7 @@ return(
 
 
                 <Link to="security" className=''>
-                <button className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-4 focus:border-l-4 focus:border-indigo-700" >
+                <button className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-4 focus:border-l-8 focus:border-indigo-700" >
                     <i class="fa-solid fa-lock text-2xl"></i>
                       <span>Security</span>
                     </button>
