@@ -44,7 +44,7 @@ export const SettingsNav = () => {
                 {/* Desktop Menus */}
                 <div className="bg-slate-200 fixed w-full z-40">
                     <div className="flex flex-wrap items-center py-2 lg:py-4">
-                        <div className="w-1/2 md:px-5  ">
+                        <div className="w-1/2 px-4 md:px-5  ">
                             <Link to="/dashboard" className="flex flex-wrap items-center space-x-4">
                                 <img src={Logo} alt="LOGO" className="w-8 hidden lg:block" />
                                 <p className="hidden lg:block">Merchantplace</p>
@@ -171,7 +171,7 @@ export const SettingsNav = () => {
                             </Link>
                         </div>
 
-                        <div className=''>
+                        <div className='pb-28'>
                             <Link to="#" >
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >

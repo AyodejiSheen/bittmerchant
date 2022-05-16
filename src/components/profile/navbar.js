@@ -45,7 +45,7 @@ return(
         {/* Desktop Menus */}
         <div className="bg-slate-200 fixed w-full z-40">
           <div className="flex flex-wrap items-center py-2 lg:py-4">
-          <div className="w-1/2 md:px-5  ">
+          <div className="w-1/2 px-4 md:px-5 ">
               <Link to="/dashboard" className="flex flex-wrap items-center space-x-4">
                 <img src={Logo} alt="LOGO" className="w-8 hidden lg:block" />
                 <p className="hidden lg:block">Merchantplace</p>
