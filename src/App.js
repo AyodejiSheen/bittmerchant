@@ -56,6 +56,7 @@ import { ProfileNav } from './components/profile/navbar';
 import { General } from './components/profile/general';
 import { Security } from './components/profile/security';
 import { SettingsNav } from './components/settings/navbar';
+import { StoreDetails } from './components/settings/storedetails';
 
 
 Aos.init({ duration: 1000 });
@@ -113,7 +114,7 @@ const App = () => {
               </Route>
 
               <Route path="settings/" element={<SettingsNav/>}>
-
+                  <Route index element={<StoreDetails/>}></Route>
               </Route>
 
 

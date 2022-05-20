@@ -156,12 +156,6 @@ export const General = () => {
                     </section>
 
 
-
-
-
-
-
-
                 </div>
             </main>
 

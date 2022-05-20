@@ -1,35 +1,10 @@
 .fa-solid{
-  color: #938bdbc5;
+  color: #6c61ccc5;
 }
 
 
 
   
   @media only screen and  (min-device-width:300px) and (max-device-width:769px) {
-  
     
-    .css-heg063-MuiTabs-flexContainer{
-      flex-wrap: wrap!important;
-      width: 200px!important;
-      background-color: #5145cd!important;
-    }
-  
-    /* .css-h0q0iv-MuiButtonBase-root-MuiTab-root{
-      justify-content:center!important;
-    } */
-     
-
-    .sm-text{
-        font-size: 10px!important;
-    }
-
-
-
-    /* .blur{
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(15px);
-  } */
-
-
   }

@@ -154,7 +154,7 @@ export const Dashnav = () => {
         <div className="flex flex-wrap">
           <div
             className={` backdrop-blur-lg overflow-y-scroll shadow-2xl md:w-80 h-screen md:h-full bg-white/30 mt-5 min-h-screen lg:translate-x-0 inset-y-0 left-0 top-11 transform fixed -translate-x-full transition duration-300 ease-in-out z-40 ${isOpen ? "translate-x-0" : "-translate-x-full"
-              }`}
+          }`}
           >
             <div className=" px-5 flex flex-wrap items-center space-x-4 lg:hidden font-medium mt-5">
               <img src={Logo} alt="LOGO" className="w-8" />

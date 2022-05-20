@@ -175,7 +175,7 @@ export const SettingsNav = () => {
                             <Link to="#" >
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-circle-user text-2xl"></i>
+                                    <i className="fa-solid fa-store  text-xl"></i>
                                     <span>Store details</span>
                                 </button>
                             </Link>
@@ -183,7 +183,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-wallet text-xl"></i>
                                     <span>Plan</span>
                                 </button>
                             </Link>
@@ -191,7 +191,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i class="fa-solid fa-circle-user text-xl"></i>
                                     <span>Users and permissions</span>
                                 </button>
                             </Link>
@@ -199,7 +199,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-money-check-dollar text-xl"></i>
                                     <span>Payments</span>
                                 </button>
                             </Link>
@@ -207,7 +207,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-cart-shopping text-xl"></i>
                                     <span>Checkout</span>
                                 </button>
                             </Link>
@@ -215,7 +215,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-truck text-xl"></i>
                                     <span>Shipping and delivery</span>
                                 </button>
                             </Link>
@@ -223,7 +223,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-scale-balanced text-xl"></i>
                                     <span>Taxes and duties</span>
                                 </button>
                             </Link>
@@ -231,7 +231,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-location-dot text-xl"></i>
                                     <span>Locations</span>
                                 </button>
                             </Link>
@@ -239,7 +239,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-gift text-xl"></i>
                                     <span>Gift cards</span>
                                 </button>
                             </Link>
@@ -247,7 +247,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-map-location-dot text-xl"></i>
                                     <span>Markets</span>
                                 </button>
                             </Link>
@@ -255,7 +255,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-tags text-xl"></i>
                                     <span>Sales channels</span>
                                 </button>
                             </Link>
@@ -263,7 +263,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-globe text-xl"></i>
                                     <span>Domains</span>
                                 </button>
                             </Link>
@@ -271,7 +271,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                   <i className="fa-solid fa-bell text-xl"></i>
                                     <span>Notifications</span>
                                 </button>
                             </Link>
@@ -279,7 +279,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-rectangle-list text-xl"></i>
                                     <span>Metafields</span>
                                 </button>
                             </Link>
@@ -287,7 +287,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-file text-xl"></i>
                                     <span>Files</span>
                                 </button>
                             </Link>
@@ -295,7 +295,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm">
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i class="fa-solid fa-language text-xl"></i>
                                     <span>Languages</span>
                                 </button>
                             </Link>
@@ -303,7 +303,7 @@ export const SettingsNav = () => {
                             <Link to="#" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
-                                    <i class="fa-solid fa-lock text-2xl"></i>
+                                    <i className="fa-solid fa-landmark text-xl"></i>
                                     <span>Policies</span>
                                 </button>
                             </Link>
