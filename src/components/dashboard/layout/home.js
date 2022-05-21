@@ -14,7 +14,7 @@ import payment from "../../../media/home/payment.svg";
 const Home = () => {
   // for nav tabs
   const [active, setActive] = useState("tab1");
-  
+
   const handleChange = (value) => {
     setActive(value);
   };
@@ -94,7 +94,7 @@ const Home = () => {
                   of the most essential aspects of your customer’s experience.
                 </p>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Start shipping
                 </button>
               </div>
@@ -459,7 +459,7 @@ const Home = () => {
                   Bridge components.
                 </p>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Install Developer Tools{" "}
                 </button>
               </div>
@@ -512,7 +512,7 @@ const Home = () => {
                   your visitors to let them access the store.
                 </p>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   See Store Password{" "}
                 </button>
               </div>
@@ -573,7 +573,7 @@ const Home = () => {
                   you can get paid.
                 </p>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Enable Payment Provider
                 </button>
               </div>
@@ -625,7 +625,7 @@ const Home = () => {
                   64% of customers look for shipping costs on the product page.
                   Easy-to-find shipping details encourage them to shop with you.
                 </p>
-                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Add Shipping Policy
                 </button>{" "}
                 <a
@@ -705,7 +705,7 @@ const Home = () => {
                   added features or functionality your online store needs.
                 </p>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Explore your options
                 </button>
               </div>
@@ -778,7 +778,7 @@ const Home = () => {
             Search over 1000 stunning photos and download them for free.
           </p>
 
-          <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-indigo-700 hover:text-white mt-5">
+          <button className="border py-2 px-5 text-xs md:text-sm shadow font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black mt-5">
             Search Photos
           </button>
         </div>
@@ -836,7 +836,7 @@ const Home = () => {
                   the Shopify Help Center YouTube Channel.
                 </p>
 
-                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Explore YouTube Channel
                 </button>
               </div>
@@ -888,7 +888,7 @@ const Home = () => {
                   With tipping at checkout, your customers have the option to
                   tip a percentage of their total order or custom amount.
                 </p>
-                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-indigo-700 hover:text-white">
+                <button className="border py-2 px-5 text-xs md:text-sm shadow-lg font-light rounded-md hover:bg-white bg-indigo-700 text-white hover:text-black">
                   Add Online Tipping
                 </button>{" "}
                 <a

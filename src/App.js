@@ -44,19 +44,24 @@ import Home from './components/dashboard/layout/home';
 import Orders from './components/dashboard/orders/orders';
 import AbandonedCheckout from './components/dashboard/orders/abandonedCheckout';
 import Draft from './components/dashboard/orders/draft';
+import { Products } from './components/dashboard/products/products';
+import { AddNewProduct } from './components/dashboard/products/new';
 
 
 
 
 //Error page
 import Errorpage from './404.js';
-import { Products } from './components/dashboard/products/products';
-import { AddNewProduct } from './components/dashboard/products/new';
+
+//Profile component
 import { ProfileNav } from './components/profile/navbar';
 import { General } from './components/profile/general';
 import { Security } from './components/profile/security';
+
+//settings component
 import { SettingsNav } from './components/settings/navbar';
 import { StoreDetails } from './components/settings/storedetails';
+import { Plan } from './components/settings/plan';
 
 
 Aos.init({ duration: 1000 });
@@ -115,6 +120,7 @@ const App = () => {
 
               <Route path="settings/" element={<SettingsNav/>}>
                   <Route index element={<StoreDetails/>}></Route>
+                  <Route path="plan" element={<Plan/>}></Route>
               </Route>
 
 

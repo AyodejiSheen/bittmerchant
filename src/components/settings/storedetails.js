@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom'
 export const StoreDetails = () => {
 
     const [flagval, setFlagval] = useState("flag");
+    const [save, setSave] = useState(false);
+
+
+    const onEdit = () => {
+        setSave(true)
+    }
+
+    const Close = () => {
+        setSave(false)
+    }
 
 
     const ChangeEdit = (val) => {
@@ -14,9 +24,20 @@ export const StoreDetails = () => {
     return (
         <>
 
-            <main className='my-24 px-5 lg:px-0'>
+            <main className='px-5 lg:px-0'>
 
-                <div className='mx-auto md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3'>
+
+                {save && (
+                    <div className="mt-16 bg-indigo-700 p-2 w-full">
+                        <div className="space-x-6 text-right">
+                            <button className="bg-black text-white px-5 py-3 font-medium" onClick={Close}>Discard</button>
+                            <button className="bg-white text-indigo-700 px-5 py-3 font-medium">Save</button>
+                        </div>
+                    </div>
+                )}
+
+
+                <div className={`mx-auto md:3/4 lg:w-11/12 xl:w-10/12 2xl:w-2/3 ${save ? "my-8" : "my-24"}`}>
 
                     <div className='border-b border-black pb-6'>
                         <h3 className='text-xl font-medium'>Store details</h3>
@@ -65,7 +86,7 @@ export const StoreDetails = () => {
 
                                     <div className="w-3/5 space-y-2">
                                         <label className="text-sm">Store name</label>
-                                        <div><input type="text" placeholder="Input the your first name" className="font-light border rounded w-full text-sm"></input></div>
+                                        <div><input type="text" placeholder="Input the your first name" className="font-light border rounded w-full text-sm" onFocus={onEdit}></input></div>
                                     </div>
 
                                     <div className="w-3/5 space-y-2">
@@ -256,49 +277,123 @@ export const StoreDetails = () => {
                                 </div>
 
                                 {flagval === "flag4" && (
-                                <div className="space-y-4 px-6 py-5">
-                                    <div>
-                                        <p className="text-base font-semibold">CURRENCY FORMATTING</p>
-                                        <label className="text-sm">Change how currencies are displayed on your store. {'{amount}'} and {'{amount_no_decimals}'} will be replaced with the price of your product. </label>
+                                    <div className="space-y-4 px-6 py-5">
+                                        <div>
+                                            <p className="text-base font-semibold">CURRENCY FORMATTING</p>
+                                            <label className="text-sm">Change how currencies are displayed on your store. {'{amount}'} and {'{amount_no_decimals}'} will be replaced with the price of your product. </label>
+                                        </div>
+
+                                        <div className="flex flex-wrap">
+                                            <div className="w-1/2 pr-4">
+                                                <div className="space-y-2">
+                                                    <label className="text-sm">HTML with currency</label>
+                                                    <div><input type="text" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
+                                                </div>
+                                            </div>
+
+                                            <div className="w-1/2 pl-4">
+                                                <div className="space-y-2">
+                                                    <label className="text-sm">HTML without currency</label>
+                                                    <div><input type="text" placeholder="{amount}" className="font-light border rounded w-full text-sm"></input></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex flex-wrap">
+                                            <div className="w-1/2 pr-4">
+                                                <div className="space-y-2">
+                                                    <label className="text-sm">Email with currency</label>
+                                                    <div><input type="text" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
+                                                </div>
+                                            </div>
+
+                                            <div className="w-1/2 pl-4">
+                                                <div className="space-y-2">
+                                                    <label className="text-sm">Email without currency</label>
+                                                    <div><input type="text" placeholder="{amount}" className="font-light border rounded w-full text-sm"></input></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2 pr-4">
-                                            <div className="space-y-2">
-                                                <label className="text-sm">HTML with currency</label>
-                                                <div><input type="text" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-1/2 pl-4">
-                                            <div className="space-y-2">
-                                                <label className="text-sm">HTML without currency</label>
-                                                <div><input type="text" placeholder="{amount}" className="font-light border rounded w-full text-sm"></input></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-wrap">
-                                        <div className="w-1/2 pr-4">
-                                            <div className="space-y-2">
-                                                <label className="text-sm">Email with currency</label>
-                                                <div><input type="text" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
-                                            </div>
-                                        </div>
-
-                                        <div className="w-1/2 pl-4">
-                                            <div className="space-y-2">
-                                                <label className="text-sm">Email without currency</label>
-                                                <div><input type="text" placeholder="{amount}" className="font-light border rounded w-full text-sm"></input></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 )}
 
                             </div>
 
                         </section>
+
+
+
+                        <section className="shadow-md bg-white rounded-lg border-b w-full px-auto">
+                            <div className="border-b px-6 py-5">
+                                <div className="">
+                                    <div>
+                                        <p className="text-base font-semibold">Standards and formats</p>
+                                        <label className="text-sm">Used to calculate product prices, shipping weights, and order times.</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div className="px-6 py-5 border-b">
+
+                                <div className="w-3/4 space-y-4">
+                                    <div className="space-y-2">
+                                        <label className="text-sm">Time zone</label>
+                                        <div><input type="number" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
+                                    </div>
+
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/2 pr-4">
+                                            <div className="space-y-2">
+                                                <label className="text-sm">Unit system</label>
+                                                <div><input type="number" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
+                                            </div>
+                                        </div>
+
+                                        <div className="w-1/2 pl-4">
+                                            <div className="space-y-2">
+                                                <label className="text-sm">Default weight unit</label>
+                                                <div><input type="number" placeholder="{amount}" className="font-light border rounded w-full text-sm"></input></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div className="space-y-4 px-6 py-5">
+                                    <div>
+                                        <p className="text-base font-semibold">EDIT ORDER ID FORMAT (OPTIONAL)</p>
+                                        <label className="text-sm">Order numbers start at #1001 by default. While you can’t change the order number itself, you can add a prefix or suffix to create IDs like "EN1001" or "1001-A."</label>
+                                    </div>
+
+                                    <div className="flex flex-wrap">
+                                        <div className="w-1/2 pr-4">
+                                            <div className="space-y-2">
+                                                <label className="text-sm">Prefix</label>
+                                                <div><input type="text" placeholder="{amount} USD" className="font-light border rounded w-full text-sm"></input></div>
+                                            </div>
+                                        </div>
+
+                                        <div className="w-1/2 pl-4">
+                                            <div className="space-y-2">
+                                                <label className="text-sm">Suffix</label>
+                                                <div><input type="text" placeholder="{amount}" className="font-light border rounded w-full text-sm"></input></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label className="text-sm">Your order ID will appear as #1001, #1002, #1003 ...</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <div className="text-right">
+                            <button className="bg-slate-300 px-6 py-4 rounded-md">Save</button>
+                        </div>
 
 
 
@@ -315,7 +410,7 @@ export const StoreDetails = () => {
                     </div>
 
 
-                    
+
 
                 </div>
             </main>

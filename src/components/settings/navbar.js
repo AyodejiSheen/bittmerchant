@@ -172,7 +172,7 @@ export const SettingsNav = () => {
                         </div>
 
                         <div className='pb-28'>
-                            <Link to="#" >
+                            <Link to="/settings" >
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
                                     <i className="fa-solid fa-store  text-xl"></i>
@@ -180,7 +180,7 @@ export const SettingsNav = () => {
                                 </button>
                             </Link>
 
-                            <Link to="#" className=''>
+                            <Link to="plan" className=''>
                                 <button onClick={navhandler} className="px-10 text-left w-full space-x-8 hover:bg-slate-100 py-2 focus:border-l-4 
                                 border-b focus:border-l-indigo-700 text-sm" >
                                     <i className="fa-solid fa-wallet text-xl"></i>
