@@ -51,7 +51,7 @@ import { AddNewProduct } from './components/dashboard/products/new';
 
 
 //Error page
-import Errorpage from './404.js';
+import {Errorpage} from './404.js';
 
 //Profile component
 import { ProfileNav } from './components/profile/navbar';
